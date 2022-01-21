@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ProjectEuler答案50-100 - Iscream2001&#39;s blog</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="PE51 Prime digit replacementsQ：找一个最小的质数，使得替换其中一段数字为相同的数字（0~9中的其中8种）仍然为质数。
+A：121313
+容易想到答案的范围一定很小，暴力,"> 
+    <meta name="author" content="Iscream2001"> 
+    <link rel="alternative" href="atom.xml" title="Iscream2001&#39;s blog" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="ProjectEuler答案50-100 - Iscream2001&#39;s blog"/>
+    <meta name="twitter:description" content="PE51 Prime digit replacementsQ：找一个最小的质数，使得替换其中一段数字为相同的数字（0~9中的其中8种）仍然为质数。
+A：121313
+容易想到答案的范围一定很小，暴力,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="Iscream2001&#39;s blog"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="ProjectEuler答案50-100 - Iscream2001&#39;s blog"/>
+    <meta property="og:description" content="PE51 Prime digit replacementsQ：找一个最小的质数，使得替换其中一段数字为相同的数字（0~9中的其中8种）仍然为质数。
+A：121313
+容易想到答案的范围一定很小，暴力,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Iscream2001&#39;s blog</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">ProjectEuler答案50-100</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">ProjectEuler答案50-100</h1>
+        <div class="stuff">
+            <span>一月 18, 2022</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h3 id="PE51-Prime-digit-replacements"><a href="#PE51-Prime-digit-replacements" class="headerlink" title="PE51 Prime digit replacements"></a>PE51 Prime digit replacements</h3><p>Q：找一个最小的质数，使得替换其中一段数字为相同的数字（0~9中的其中8种）仍然为质数。</p>
+<p>A：121313</p>
+<p>容易想到答案的范围一定很小，暴力枚举质数以及替换的那段。</p>
+<h3 id="PE60-Prime-pair-sets"><a href="#PE60-Prime-pair-sets" class="headerlink" title="PE60 Prime pair sets"></a>PE60 Prime pair sets</h3><p>Q：找到5个不同的质数，使得任意其中两个以任意顺序拼接得到的数字仍然是质数。找到这5个数的和的最小值。</p>
+<p>A：26033</p>
+<p>容易想到答案的范围一定很小，在10000以内的质数中搜索即可。这5个数是13，5197，5701，6733，8389。</p>
+<h3 id="PE61-Cyclical-figurate-numbers"><a href="#PE61-Cyclical-figurate-numbers" class="headerlink" title="PE61 Cyclical figurate numbers"></a>PE61 Cyclical figurate numbers</h3><p>Q：找到6个4位数，这6个数连成一个环，前一个数的后两位是是后一个数的前两位，然后这6个数属于6种不同的多边形数。求出这6个数的和。</p>
+<p>A:28684</p>
+<p>观察多边形数的公式，可以发现4位数中6种多边形数个数都很少，全部求出来然后搜索一个6元环就行了。</p>
+<h3 id="PE62-Cubic-permutations"><a href="#PE62-Cubic-permutations" class="headerlink" title="PE62 Cubic permutations"></a>PE62 Cubic permutations</h3><p>Q：找到一个最小的立方数，这个立方数的各位重排后能够形成5种不同的立方数。</p>
+<p>A:127035954683</p>
+<p>枚举立方数是什么数字的三次方，然后用哈希表记一下即可。</p>
+<h3 id="PE64-Odd-period-square-roots"><a href="#PE64-Odd-period-square-roots" class="headerlink" title="PE64 Odd period square roots"></a>PE64 Odd period square roots</h3><p>Q：10000以内有几个非平方数的根号的分数表示的循环是奇数。</p>
+<p>A: 1322</p>
+<p>按照题目中给出的式子进行模拟即可。</p>
+<h3 id="PE65-Convergents-of-e"><a href="#PE65-Convergents-of-e" class="headerlink" title="PE65 Convergents of e"></a>PE65 Convergents of e</h3><p>Q：给出了e用连续分数表示的公式，求第100项（只计算前100层连续分数）的分子的各位数字之和。</p>
+<p>A: 272</p>
+<p>高精度模拟，用python挺方便的。</p>
+<h3 id="PE66-Diophantine-equation"><a href="#PE66-Diophantine-equation" class="headerlink" title="PE66 Diophantine equation"></a>PE66 Diophantine equation</h3><p>Q：假设丢番图方程$x^2-Dy^2=1$在D为平方数时无解，令$F(d)$为$D=d$时x的最小解，求$max_{2 \leq d \leq 1000}F(d)$。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="false"
+        data-ae="false"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
