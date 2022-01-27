@@ -104,6 +104,30 @@ A：容易想到答案,"/>
 <p>A:在Stern-Brocot树上遍历一下就行，也可以强行推式子，但是分母很小，遍历就已经能在1秒内了。</p>
 <h3 id="PE74-Digit-factorial-chains"><a href="#PE74-Digit-factorial-chains" class="headerlink" title="PE74 Digit factorial chains"></a>PE74 Digit factorial chains</h3><p>Q:大小为1000000的有向图，每个点指向的编号是本身各位数字的阶乘之和。已知该图最长不重复的链长度为60，问有多少不同的长度为60的链。</p>
 <p>A:算出每个数的后继，枚举链的起点，然后顺着链找下去就行了，由于最后答案挺小的，实际上跑的很快。</p>
+<h3 id="PE75-Singular-integer-right-triangles"><a href="#PE75-Singular-integer-right-triangles" class="headerlink" title="PE75 Singular integer right triangles"></a>PE75 Singular integer right triangles</h3><p>Q:问$L \leq 1,500,000$范围内，有多少种长度只能被表示成一种勾股数之和的形式。</p>
+<p>A:枚举所有范围内的勾股数，注意不要重复枚举到。枚举勾股数的方法见我笔记。</p>
+<h3 id="PE76-Counting-summations"><a href="#PE76-Counting-summations" class="headerlink" title="PE76 Counting summations"></a>PE76 Counting summations</h3><p>Q:将100写成不上升整数数列(数列长度至少为2)的和有多少种不同的方式。</p>
+<p>A:dp入门题，$dp_{i,j}$表示剩余i个，当前最大能放j的方案数。</p>
+<p>于是$dp_{i,j}=dp_{i,j-1}(j&gt;2)+dp_{i-j,j}(j \leq i)$，需要求出$dp_{100,100}$。</p>
+<p>注意所需长度至少为2，需要减去只有一个100的情况，即减1。</p>
+<h3 id="PE77-Prime-summations"><a href="#PE77-Prime-summations" class="headerlink" title="PE77 Prime summations"></a>PE77 Prime summations</h3><p>Q:令f(x)表示将x写成不上升整数数列(数列长度至少为2并且数列中的数全是素数)的和有多少种不同的方式，问$f(x)\geq 5000$的最小的x是多少。</p>
+<p>A:思路和dp方程和上一题几乎一样，dp时候判断一下素数就好，递推的时候顺便看下方案数是否超过5000。</p>
+<h3 id="PE78-Coin-partitions"><a href="#PE78-Coin-partitions" class="headerlink" title="PE78 Coin partitions"></a>PE78 Coin partitions</h3><p>Q:令f(x)表示将x写成不上升整数数列(数列长度至少为2)的和有多少种不同的方式，问f(x)为1000000的倍数的最小的x是多少。</p>
+<p>A:思路和dp方程和PE76一样，dp值改成在模1000000意义下的值，递推时看下方案是否为模1000000为0。</p>
+<h3 id="PE79-Passcode-derivation"><a href="#PE79-Passcode-derivation" class="headerlink" title="PE79 Passcode derivation"></a>PE79 Passcode derivation</h3><p>Q:一个未知长度的数字密码，给出多次询问某顺序三位的答案，求出最短可能的密码。</p>
+<p>A:手算and猜，没什么好说的。</p>
+<h3 id="PE80-Square-root-digital-expansion"><a href="#PE80-Square-root-digital-expansion" class="headerlink" title="PE80 Square root digital expansion"></a>PE80 Square root digital expansion</h3><p>Q:前一百个自然数的平方根，求其中所有无理数的前一百位数字（包括小数点前的数字）的总和。</p>
+<p>A:用c++的话必不可免需要高精度，然而python直接秒了，用python的decimal库可以保证不掉精度。</p>
+<h3 id="PE81-Path-sum-two-ways"><a href="#PE81-Path-sum-two-ways" class="headerlink" title="PE81 Path sum: two ways"></a>PE81 Path sum: two ways</h3><p>Q:80乘80的矩阵，求出从该矩阵的左上方到右下方始终只向右和向下移动的最小路径和。</p>
+<p>A:基础dp题属于是。</p>
+<h3 id="PE82-Path-sum-three-ways"><a href="#PE82-Path-sum-three-ways" class="headerlink" title="PE82 Path sum: three ways"></a>PE82 Path sum: three ways</h3><p>Q:80乘80的矩阵，从最左栏任意一格出发，始终只向右、向上或向下移动，到最右栏任意一格结束的最小路径。</p>
+<p>A:简单dp。一列之内用最短路跑一轮，然后再向后一列转移。</p>
+<h3 id="PE83-Path-sum-three-ways"><a href="#PE83-Path-sum-three-ways" class="headerlink" title="PE83 Path sum: three ways"></a>PE83 Path sum: three ways</h3><p>Q:80乘80的矩阵，从左上角到右下角任意地向上、向下、向左或向右移动的最小路径和。</p>
+<p>A:最短路裸题捏。</p>
+<h3 id="PE84-Monopoly-odds"><a href="#PE84-Monopoly-odds" class="headerlink" title="PE84 Monopoly odds"></a>PE84 Monopoly odds</h3><p>Q:题面真长，大致是给了个大富翁地图然后给了一堆规则，问经过概率最大的三个格子。</p>
+<p>A:模拟一下，按照规则模拟，找到经过次数最多的三个，或者列方程做高斯消元。</p>
+<h3 id="PE85-Counting-rectangles"><a href="#PE85-Counting-rectangles" class="headerlink" title="PE85 Counting rectangles"></a>PE85 Counting rectangles</h3><p>Q:找到一个网格图，使得网格图中的长方形个数最接近2000000，求出这个网格图的长和宽。</p>
+<p>A:长为x宽为y的网格图中有$\frac{x(1+x)y(1+y)}{4}$个长方形，枚举xy即可。</p>
 <p>```</p>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
 
