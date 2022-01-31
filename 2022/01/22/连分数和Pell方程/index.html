@@ -76,7 +76,7 @@
 <p>可以表示为$x=[a_0;a_1,a_2,a_3,…,2a_0,a_1,a_2,…]$</p>
 <p>也可以表示为$x=[a_0;(a_1,a_2,a_3,…,2a_0)]$</p>
 <h4 id="e的连分数表示"><a href="#e的连分数表示" class="headerlink" title="e的连分数表示"></a>e的连分数表示</h4><p>$e = [2;1,2,1,1,4,1,1,6,1,…,1,2k,1]$</p>
-<h3 id="Pell方程"><a href="#Pell方程" class="headerlink" title="Pell方程"></a>Pell方程</h3><h4 id="Pell的一般形式"><a href="#Pell的一般形式" class="headerlink" title="Pell的一般形式"></a>Pell的一般形式</h4><p>$x^2 - Dy^2 =1$</p>
+<h3 id="标准型Pell方程"><a href="#标准型Pell方程" class="headerlink" title="标准型Pell方程"></a>标准型Pell方程</h3><h4 id="柿子"><a href="#柿子" class="headerlink" title="柿子"></a>柿子</h4><p>$x^2 - Dy^2 =1$</p>
 <h4 id="平凡解"><a href="#平凡解" class="headerlink" title="平凡解"></a>平凡解</h4><p>显然有解$(\pm 1,0)$</p>
 <h4 id="特解（最小解）"><a href="#特解（最小解）" class="headerlink" title="特解（最小解）"></a>特解（最小解）</h4><p>首先得到$\sqrt{D}$的连分数表示$D=[a_0;(a_1,a_2,a_3,…,2a_0)]$。</p>
 <p>去掉最后一项并令正整数$x_1,y_1$满足$\frac{x_1}{y_1}=[a_0;a_1,a_2,a_3,…]$。</p>
@@ -86,6 +86,14 @@
 <p>递推式：</p>
 <p>$x_{i+1}=x_1x_i+Dy_1y_i$</p>
 <p>$y_{i+1}=x_1y_i+x_iy_1$</p>
+<h3 id="一般型Pell方程"><a href="#一般型Pell方程" class="headerlink" title="一般型Pell方程"></a>一般型Pell方程</h3><h4 id="婆罗摩笈多-斐波那契恒等式"><a href="#婆罗摩笈多-斐波那契恒等式" class="headerlink" title="婆罗摩笈多-斐波那契恒等式"></a>婆罗摩笈多-斐波那契恒等式</h4><p>$(a^2+b^2)(c^2+d^2)=(ac \mp bd)^2+(ad \pm bc)^2$</p>
+<h4 id="一般型Pell方程-1"><a href="#一般型Pell方程-1" class="headerlink" title="一般型Pell方程"></a>一般型Pell方程</h4><p>$x^2 - Dy^2 =k$</p>
+<h4 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h4><p>先找到第一组解${x_0}^2 - D{y_0}^2 = k$（使用连分数，或者暴力找）</p>
+<p>定义标准型Pell方程$r^2-Ds^2=1$</p>
+<p>利用婆罗摩笈多-斐波那契恒等式：$k=k \cdot 1=({x_0}^2-D{y_0}^2)(r^2-Ds^2)=({x_0}r+D{y_0}s)^2-D({x_0}s+{y_0}r)^2$</p>
+<p>于是得到$x={x_0}r+D{y_0}s,y={x_0}s+{y_0}r$，不停迭代即可得到所有整数解</p>
+<h3 id="没有xy项的二次丢番图方程"><a href="#没有xy项的二次丢番图方程" class="headerlink" title="没有xy项的二次丢番图方程"></a>没有xy项的二次丢番图方程</h3><p>$Ax^2+Bx+Cy^2+Dy+E=0$</p>
+<p>配成$x^2-Ny^2=K$的形式，然后用一般型Pell方程来解。</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
