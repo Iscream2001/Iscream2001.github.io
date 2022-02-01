@@ -5,14 +5,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>勾股数 - Iscream2001&#39;s blog</title>
+    <title>拉格朗日插值 - Iscream2001&#39;s blog</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="勾股数令三个正整数$a,b,c$满足$a^2+b^2=c^2$,则认为这3个数组成的三元组为勾股数。
-基本勾股数若$a,b,c$满足是一组勾股数，并且三个数的最大公约数为1，则认为是基本勾股数。
-获,"> 
+    <meta name="description" content="拉格朗日插值问题一个$n$次多项式$F(x)=\sum_{i=0}^{n}A_ix^i$的$n+1$个点值$（x_i,y_i）$。
+求$F(m)$的值，对一个数取模（也可能不取模）,m很大。
+拉格朗,"> 
     <meta name="author" content="Iscream2001"> 
     <link rel="alternative" href="atom.xml" title="Iscream2001&#39;s blog" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -20,20 +20,20 @@
     
     
     <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="勾股数 - Iscream2001&#39;s blog"/>
-    <meta name="twitter:description" content="勾股数令三个正整数$a,b,c$满足$a^2+b^2=c^2$,则认为这3个数组成的三元组为勾股数。
-基本勾股数若$a,b,c$满足是一组勾股数，并且三个数的最大公约数为1，则认为是基本勾股数。
-获,"/>
+    <meta name="twitter:title" content="拉格朗日插值 - Iscream2001&#39;s blog"/>
+    <meta name="twitter:description" content="拉格朗日插值问题一个$n$次多项式$F(x)=\sum_{i=0}^{n}A_ix^i$的$n+1$个点值$（x_i,y_i）$。
+求$F(m)$的值，对一个数取模（也可能不取模）,m很大。
+拉格朗,"/>
     
     
     
     
     <meta property="og:site_name" content="Iscream2001&#39;s blog"/>
     <meta property="og:type" content="object"/>
-    <meta property="og:title" content="勾股数 - Iscream2001&#39;s blog"/>
-    <meta property="og:description" content="勾股数令三个正整数$a,b,c$满足$a^2+b^2=c^2$,则认为这3个数组成的三元组为勾股数。
-基本勾股数若$a,b,c$满足是一组勾股数，并且三个数的最大公约数为1，则认为是基本勾股数。
-获,"/>
+    <meta property="og:title" content="拉格朗日插值 - Iscream2001&#39;s blog"/>
+    <meta property="og:description" content="拉格朗日插值问题一个$n$次多项式$F(x)=\sum_{i=0}^{n}A_ix^i$的$n+1$个点值$（x_i,y_i）$。
+求$F(m)$的值，对一个数取模（也可能不取模）,m很大。
+拉格朗,"/>
     
 <link rel="stylesheet" href="/css/diaspora.css">
 
@@ -47,7 +47,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
     <div title="播放/暂停" class="iconfont icon-play"></div>
-    <h3 class="subtitle">勾股数</h3>
+    <h3 class="subtitle">拉格朗日插值</h3>
     <div class="social">
         <div>
             <div class="share">
@@ -62,21 +62,19 @@
     <div class="section">
         <div class="article">
     <div class='main'>
-        <h1 class="title">勾股数</h1>
+        <h1 class="title">拉格朗日插值</h1>
         <div class="stuff">
-            <span>一月 25, 2022</span>
+            <span>二月 01, 2022</span>
             
 
         </div>
         <div class="content markdown">
-            <h3 id="勾股数"><a href="#勾股数" class="headerlink" title="勾股数"></a>勾股数</h3><p>令三个正整数$a,b,c$满足$a^2+b^2=c^2$,则认为这3个数组成的三元组为勾股数。</p>
-<h4 id="基本勾股数"><a href="#基本勾股数" class="headerlink" title="基本勾股数"></a>基本勾股数</h4><p>若$a,b,c$满足是一组勾股数，并且三个数的最大公约数为1，则认为是基本勾股数。</p>
-<h4 id="获得所有基本勾股数"><a href="#获得所有基本勾股数" class="headerlink" title="获得所有基本勾股数"></a>获得所有基本勾股数</h4><p>本文只介绍方法，不做证明。</p>
-<p>若对于所有基本勾股数，有$a=2nm,b=n^2-m^2,c=n^2+m^2(n&gt;m且gcd(n,m)=1且n和m奇偶性不同)$。</p>
-<p>于是可以枚举合理的n,m,就能算出对应的勾股数，并且不会重复枚举到。</p>
-<h4 id="获得所有勾股数"><a href="#获得所有勾股数" class="headerlink" title="获得所有勾股数"></a>获得所有勾股数</h4><p>将基本勾股数三个一起乘上一个数即可得到一组新的勾股数。</p>
-<h4 id="一定范围内勾股数的个数"><a href="#一定范围内勾股数的个数" class="headerlink" title="一定范围内勾股数的个数"></a>一定范围内勾股数的个数</h4><p>由于枚举基本勾股数的算法，我们只需算出合法的n,m的个数就能算出基本勾股数的数量。</p>
-<p>而普通勾股数，可以算下每个基本勾股数能乘的系数，加起来就行了。</p>
+            <h3 id="拉格朗日插值"><a href="#拉格朗日插值" class="headerlink" title="拉格朗日插值"></a>拉格朗日插值</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>一个$n$次多项式$F(x)=\sum_{i=0}^{n}A_ix^i$的$n+1$个点值$（x_i,y_i）$。</p>
+<p>求$F(m)$的值，对一个数取模（也可能不取模）,m很大。</p>
+<h4 id="拉格朗日插值法"><a href="#拉格朗日插值法" class="headerlink" title="拉格朗日插值法"></a>拉格朗日插值法</h4><p>令$L_j(x)= \prod_{i=0,i\neq j}^{n} \frac{x-x_i}{x_j-x_i}$</p>
+<p>可以发现$L_j(x)$在$x=x_j$时为1，在$x=x_i(i \neq j)$时为0</p>
+<p>于是原多项式可以表示为$F(x)=\sum_{i=0}^{n}y_iL_i(x)$</p>
+<p>于是我们得到了一种$O(n^2)$的插值方法。</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
