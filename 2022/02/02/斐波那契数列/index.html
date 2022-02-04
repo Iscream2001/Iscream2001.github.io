@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>斐波那契数列 - Iscream2001&#39;s blog</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="斐波那契数列前言本文用$(x,y)$表示$gcd(x,y)$
+斐波那契数列的定义fib_{n}=\left\{
+\begin{aligned}
+&amp;0 &amp; &amp; n=0 \\
+&amp;1 &amp; &amp; n=1 \\,"> 
+    <meta name="author" content="Iscream2001"> 
+    <link rel="alternative" href="atom.xml" title="Iscream2001&#39;s blog" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="斐波那契数列 - Iscream2001&#39;s blog"/>
+    <meta name="twitter:description" content="斐波那契数列前言本文用$(x,y)$表示$gcd(x,y)$
+斐波那契数列的定义fib_{n}=\left\{
+\begin{aligned}
+&amp;0 &amp; &amp; n=0 \\
+&amp;1 &amp; &amp; n=1 \\,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="Iscream2001&#39;s blog"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="斐波那契数列 - Iscream2001&#39;s blog"/>
+    <meta property="og:description" content="斐波那契数列前言本文用$(x,y)$表示$gcd(x,y)$
+斐波那契数列的定义fib_{n}=\left\{
+\begin{aligned}
+&amp;0 &amp; &amp; n=0 \\
+&amp;1 &amp; &amp; n=1 \\,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Iscream2001&#39;s blog</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">斐波那契数列</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">斐波那契数列</h1>
+        <div class="stuff">
+            <span>二月 02, 2022</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h3 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h3><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>本文用$(x,y)$表示$gcd(x,y)$</p>
+<h4 id="斐波那契数列的定义"><a href="#斐波那契数列的定义" class="headerlink" title="斐波那契数列的定义"></a>斐波那契数列的定义</h4><script type="math/tex; mode=display">fib_{n}=\left\{
+\begin{aligned}
+&0 & & n=0 \\
+&1 & & n=1 \\
+&fib_{n-1}+fib_{n-2} &  & n>1
+\end{aligned}
+\right.</script><h4 id="快速求-fib-n"><a href="#快速求-fib-n" class="headerlink" title="快速求$fib_n$"></a>快速求$fib_n$</h4><p>1.矩阵快速幂</p>
+<p>$\left[ \begin{matrix} fib_{n+1} \\ fib_{n} \end{matrix} \right]$ $=$ ${\left[ \begin{matrix} 1 &amp; 1 \\ 1 &amp; 0 \end{matrix} \right]}^{n}$ $\left[ \begin{matrix} fib_{1} \\ fib_{0} \end{matrix} \right]$ </p>
+<p>2.通项公式（怎么求就先不写了吧。。）</p>
+<p>$fib_{n}$ $=$ $\frac{1}{\sqrt[]{5}} [ {(\frac{1+\sqrt[]{5}}{2})}^{n}-{(\frac{1-\sqrt[]{5}}{2})}^{n}]$</p>
+<p>ps.这个通项公式看起来没用，但如果要求$f_n$对一个数取模，并且5在模数下有二次方根，用通项公式会有奇效。。</p>
+<h4 id="求-fib-n-的前m位（n很大m很小）"><a href="#求-fib-n-的前m位（n很大m很小）" class="headerlink" title="求$fib_n$的前m位（n很大m很小）"></a>求$fib_n$的前m位（n很大m很小）</h4><p>$fib_{n}=\frac{1}{\sqrt[]{5}} [ {(\frac{1+\sqrt[]{5}}{2})}^{n}-{(\frac{1-\sqrt[]{5}}{2})}^{n}]$</p>
+<p>$log10(fib_n)=log10(\frac{1}{\sqrt[]{5}})+log10( {(\frac{1+\sqrt[]{5}}{2})}^{n}-{(\frac{1-\sqrt[]{5}}{2})}^{n})$</p>
+<p>$log10(fib_n)=log10(\frac{1}{\sqrt[]{5}})+nlog10(\frac{1+\sqrt[]{5}}{2})+log10(1-{(\frac{1-\sqrt[]{5}}{1+\sqrt[]{5}})}^{n})$</p>
+<p>考虑从$log10(x)$得到$x$的方法。</p>
+<p>$log10(x)$的小数点左边代表的是10的整数次方，在科学计数法中相当于是$A \cdot {10}^B$中的B，所以小数点右边代表着数位的值。</p>
+<p>所以去掉$log10(x)$的整数部分，剩下的部分用pow算出来，得到的数值就是科学计数法的$A$。</p>
+<p>将$A$乘上$10^{m-1}$就得到答案的前m位了。</p>
+<h4 id="斐波那契和gcd"><a href="#斐波那契和gcd" class="headerlink" title="斐波那契和gcd"></a>斐波那契和gcd</h4><p>1.$(fib_{n},fib_{n-1})=1$</p>
+<p>证明：$(fib_{n},fib_{n-1})=(fib_{n-1}+fib_{n-2},fib_{n-1})=(fib_{n-1},fib_{n-2})=……$</p>
+<p>2.$fib_{n+m}=fib_{n-1}fib_{m}+fib_{n}fib_{m+1}$</p>
+<p>证明：令$m=1$和$m=2$直接计算成立。。。</p>
+<p>然后假设$m=k-1$和$m=k$都成立时，证明$m=k+1$时也成立</p>
+<p>$fib_{n+k+1}=fib_{n+k}+fib_{n+k-1}$</p>
+<p>$fib_{n+k+1}=(fib_{n-1}fib_{k-1}+fib_{n}fib_{k})+(fib_{n-1}fib_{k}+fib_{n}fib_{k+1})$</p>
+<p>$fib_{n+k+1}=fib_{n-1}fib_{k+1}+fib_{n}fib_{k+2}$</p>
+<p>3.$(fib_{n+m},fib_{n})=(fib_{m},fib_{n})$</p>
+<p>证明：$(fib_{n+m},fib_{n})=(fib_{n-1}fib_{m}+fib_{n}fib_{m+1},fib_{n})$</p>
+<p>$(fib_{n+m},fib_{n})=(fib_{n-1}fib_{m},fib_{n})$</p>
+<p>$(fib_{n+m},fib_{n})=(fib_{m},fib_{n})$</p>
+<p>4.$(fib_{n},fib_{m})=fib_{(n,m)}$</p>
+<p>证明：套用c的结论辗转相除即可。</p>
+<p>5.$fib_{n}|fib_{m}$等价于$n|m$</p>
+<p>证明：$a|b$等价于$(a,b)=a$,$fib_{n}|fib_{m}$等价于$fib_{n}=(fib_{n},fib_{m})$</p>
+<p>相当于$fib_{n}=fib_{(n,m)}$，于是$n=(n,m)$</p>
+<p>6.每$n$个连续的斐波那契数有且仅有一个被$fib_{n}$整除</p>
+<p>证明：由e的结论，所有能被$fib_{n}$整除的$fib_{m}$的条件是$n|m$，结论就比较显然了。</p>
+<h4 id="斐波那契的循环节"><a href="#斐波那契的循环节" class="headerlink" title="斐波那契的循环节"></a>斐波那契的循环节</h4><p>1.结论：斐波那契数列对某个数n取模的循环节长度是O(n)级别的。</p>
+<h4 id="斐波那契的一些恒等式（证明略。。基本都能用数学归纳法）"><a href="#斐波那契的一些恒等式（证明略。。基本都能用数学归纳法）" class="headerlink" title="斐波那契的一些恒等式（证明略。。基本都能用数学归纳法）"></a>斐波那契的一些恒等式（证明略。。基本都能用数学归纳法）</h4><p>1.$\displaystyle \sum_{i=0}^{n}{fib_{i}}=fib_{n+2}-1$</p>
+<p>2.$fib_{1}+fib_{3}+….+fib_{2n-1}=fib_{2n}$</p>
+<p>3.$fib_{2}+fib_{4}+….+fib_{2n}=fib_{2n+1}-1$</p>
+<p>4.$\displaystyle \sum_{i=0}^{n}{fib_{i}}^2=fib_{n}fib_{n+1}$</p>
+<p>5.$\displaystyle \sum_{i=0}^{n}{(i \cdot fib_{i})}=n \cdot fib_{n+2} - fib_{n+3} + 2$</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="false"
+        data-ae="false"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+
+</html>
