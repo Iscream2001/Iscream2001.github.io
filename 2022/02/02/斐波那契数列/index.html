@@ -75,26 +75,26 @@
 
         </div>
         <div class="content markdown">
-            <h3 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h3><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>本文用$(x,y)$表示$gcd(x,y)$</p>
-<h4 id="斐波那契数列的定义"><a href="#斐波那契数列的定义" class="headerlink" title="斐波那契数列的定义"></a>斐波那契数列的定义</h4><script type="math/tex; mode=display">fib_{n}=\left\{
+            <h2 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本文用$(x,y)$表示$gcd(x,y)$</p>
+<h3 id="斐波那契数列的定义"><a href="#斐波那契数列的定义" class="headerlink" title="斐波那契数列的定义"></a>斐波那契数列的定义</h3><script type="math/tex; mode=display">fib_{n}=\left\{
 \begin{aligned}
 &0 & & n=0 \\
 &1 & & n=1 \\
 &fib_{n-1}+fib_{n-2} &  & n>1
 \end{aligned}
-\right.</script><h4 id="快速求-fib-n"><a href="#快速求-fib-n" class="headerlink" title="快速求$fib_n$"></a>快速求$fib_n$</h4><p>1.矩阵快速幂</p>
+\right.</script><h3 id="快速求-fib-n"><a href="#快速求-fib-n" class="headerlink" title="快速求$fib_n$"></a>快速求$fib_n$</h3><p>1.矩阵快速幂</p>
 <p>$\left[ \begin{matrix} fib_{n+1} \\ fib_{n} \end{matrix} \right]$ $=$ ${\left[ \begin{matrix} 1 &amp; 1 \\ 1 &amp; 0 \end{matrix} \right]}^{n}$ $\left[ \begin{matrix} fib_{1} \\ fib_{0} \end{matrix} \right]$ </p>
 <p>2.通项公式（怎么求就先不写了吧。。）</p>
 <p>$fib_{n}$ $=$ $\frac{1}{\sqrt[]{5}} [ {(\frac{1+\sqrt[]{5}}{2})}^{n}-{(\frac{1-\sqrt[]{5}}{2})}^{n}]$</p>
 <p>ps.这个通项公式看起来没用，但如果要求$f_n$对一个数取模，并且5在模数下有二次方根，用通项公式会有奇效。。</p>
-<h4 id="求-fib-n-的前m位（n很大m很小）"><a href="#求-fib-n-的前m位（n很大m很小）" class="headerlink" title="求$fib_n$的前m位（n很大m很小）"></a>求$fib_n$的前m位（n很大m很小）</h4><p>$fib_{n}=\frac{1}{\sqrt[]{5}} [ {(\frac{1+\sqrt[]{5}}{2})}^{n}-{(\frac{1-\sqrt[]{5}}{2})}^{n}]$</p>
+<h3 id="求-fib-n-的前m位（n很大m很小）"><a href="#求-fib-n-的前m位（n很大m很小）" class="headerlink" title="求$fib_n$的前m位（n很大m很小）"></a>求$fib_n$的前m位（n很大m很小）</h3><p>$fib_{n}=\frac{1}{\sqrt[]{5}} [ {(\frac{1+\sqrt[]{5}}{2})}^{n}-{(\frac{1-\sqrt[]{5}}{2})}^{n}]$</p>
 <p>$log10(fib_n)=log10(\frac{1}{\sqrt[]{5}})+log10( {(\frac{1+\sqrt[]{5}}{2})}^{n}-{(\frac{1-\sqrt[]{5}}{2})}^{n})$</p>
 <p>$log10(fib_n)=log10(\frac{1}{\sqrt[]{5}})+nlog10(\frac{1+\sqrt[]{5}}{2})+log10(1-{(\frac{1-\sqrt[]{5}}{1+\sqrt[]{5}})}^{n})$</p>
 <p>考虑从$log10(x)$得到$x$的方法。</p>
 <p>$log10(x)$的小数点左边代表的是10的整数次方，在科学计数法中相当于是$A \cdot {10}^B$中的B，所以小数点右边代表着数位的值。</p>
 <p>所以去掉$log10(x)$的整数部分，剩下的部分用pow算出来，得到的数值就是科学计数法的$A$。</p>
 <p>将$A$乘上$10^{m-1}$就得到答案的前m位了。</p>
-<h4 id="斐波那契和gcd"><a href="#斐波那契和gcd" class="headerlink" title="斐波那契和gcd"></a>斐波那契和gcd</h4><p>1.$(fib_{n},fib_{n-1})=1$</p>
+<h3 id="斐波那契和gcd"><a href="#斐波那契和gcd" class="headerlink" title="斐波那契和gcd"></a>斐波那契和gcd</h3><p>1.$(fib_{n},fib_{n-1})=1$</p>
 <p>证明：$(fib_{n},fib_{n-1})=(fib_{n-1}+fib_{n-2},fib_{n-1})=(fib_{n-1},fib_{n-2})=……$</p>
 <p>2.$fib_{n+m}=fib_{n-1}fib_{m}+fib_{n}fib_{m+1}$</p>
 <p>证明：令$m=1$和$m=2$直接计算成立。。。</p>
@@ -113,12 +113,18 @@
 <p>相当于$fib_{n}=fib_{(n,m)}$，于是$n=(n,m)$</p>
 <p>6.每$n$个连续的斐波那契数有且仅有一个被$fib_{n}$整除</p>
 <p>证明：由e的结论，所有能被$fib_{n}$整除的$fib_{m}$的条件是$n|m$，结论就比较显然了。</p>
-<h4 id="斐波那契的循环节"><a href="#斐波那契的循环节" class="headerlink" title="斐波那契的循环节"></a>斐波那契的循环节</h4><p>1.结论：斐波那契数列对某个数n取模的循环节长度是O(n)级别的。</p>
-<h4 id="斐波那契的一些恒等式（证明略。。基本都能用数学归纳法）"><a href="#斐波那契的一些恒等式（证明略。。基本都能用数学归纳法）" class="headerlink" title="斐波那契的一些恒等式（证明略。。基本都能用数学归纳法）"></a>斐波那契的一些恒等式（证明略。。基本都能用数学归纳法）</h4><p>1.$\displaystyle \sum_{i=0}^{n}{fib_{i}}=fib_{n+2}-1$</p>
+<h3 id="斐波那契的一些恒等式（证明略。。基本都能用数学归纳法）"><a href="#斐波那契的一些恒等式（证明略。。基本都能用数学归纳法）" class="headerlink" title="斐波那契的一些恒等式（证明略。。基本都能用数学归纳法）"></a>斐波那契的一些恒等式（证明略。。基本都能用数学归纳法）</h3><p>1.$\displaystyle \sum_{i=0}^{n}{fib_{i}}=fib_{n+2}-1$</p>
 <p>2.$fib_{1}+fib_{3}+….+fib_{2n-1}=fib_{2n}$</p>
 <p>3.$fib_{2}+fib_{4}+….+fib_{2n}=fib_{2n+1}-1$</p>
 <p>4.$\displaystyle \sum_{i=0}^{n}{fib_{i}}^2=fib_{n}fib_{n+1}$</p>
 <p>5.$\displaystyle \sum_{i=0}^{n}{(i \cdot fib_{i})}=n \cdot fib_{n+2} - fib_{n+3} + 2$</p>
+<h3 id="斐波那契的循环节"><a href="#斐波那契的循环节" class="headerlink" title="斐波那契的循环节"></a>斐波那契的循环节</h3><p>设循环节长度为$m$</p>
+<p>结论：斐波那契数列对某个数$P$取模的循环节长度是$O(P)$级别的。</p>
+<p>1.模数P是任意正整数时，$m\leq 6P$</p>
+<p>2.当5是模P意义下的二次剩余，且P是非5的奇质数，$m\leq P-1$</p>
+<p>3.当5不是模P意义下的二次剩余，且P是非5的奇质数，$m\leq 2P+2$</p>
+<h3 id="齐肯多夫定理"><a href="#齐肯多夫定理" class="headerlink" title="齐肯多夫定理"></a>齐肯多夫定理</h3><p>结论：任何正整数都可以唯一地表示为若干个不连续的斐波那契数之和</p>
+<p>证明：（数学归纳法）</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
