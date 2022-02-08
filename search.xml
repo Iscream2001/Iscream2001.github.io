@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>不常用数学公式整理1</title>
+    <url>/2022/02/04/%E4%B8%8D%E5%B8%B8%E7%94%A8%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%95%B4%E7%90%861/</url>
+    <content><![CDATA[<h3 id="不常用数学公式整理1"><a href="#不常用数学公式整理1" class="headerlink" title="不常用数学公式整理1"></a>不常用数学公式整理1</h3><h4 id="威尔逊定理"><a href="#威尔逊定理" class="headerlink" title="威尔逊定理"></a>威尔逊定理</h4><p>$(p-1)!$ $\equiv$ $p-1$ $(mod$  $p)$ ( $p$ 是质数)</p>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>拉格朗日插值</title>
+    <url>/2022/02/01/%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E6%8F%92%E5%80%BC/</url>
+    <content><![CDATA[<h3 id="拉格朗日插值"><a href="#拉格朗日插值" class="headerlink" title="拉格朗日插值"></a>拉格朗日插值</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>一个$n$次多项式$F(x)=\sum_{i=0}^{n}A_ix^i$的$n+1$个点值$（x_i,y_i）$。</p>
+<p>求$F(m)$的值，对一个数取模（也可能不取模）,m很大。</p>
+<h4 id="拉格朗日插值法"><a href="#拉格朗日插值法" class="headerlink" title="拉格朗日插值法"></a>拉格朗日插值法</h4><p>令$L_j(x)= \prod_{i=0,i\neq j}^{n} \frac{x-x_i}{x_j-x_i}$</p>
+<p>可以发现$L_j(x)$在$x=x_j$时为1，在$x=x_i(i \neq j)$时为0</p>
+<p>于是原多项式可以表示为$F(x)=\sum_{i=0}^{n}y_iL_i(x)$</p>
+<p>于是我们得到了一种$O(n^2)$的插值方法。</p>
+]]></content>
+      <categories>
+        <category>多项式</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/01/18/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>勾股数</title>
+    <url>/2022/01/25/%E5%8B%BE%E8%82%A1%E6%95%B0/</url>
+    <content><![CDATA[<h3 id="勾股数"><a href="#勾股数" class="headerlink" title="勾股数"></a>勾股数</h3><p>令三个正整数$a,b,c$满足$a^2+b^2=c^2$,则认为这3个数组成的三元组为勾股数。</p>
+<h4 id="基本勾股数"><a href="#基本勾股数" class="headerlink" title="基本勾股数"></a>基本勾股数</h4><p>若$a,b,c$满足是一组勾股数，并且三个数的最大公约数为1，则认为是基本勾股数。</p>
+<h4 id="获得所有基本勾股数"><a href="#获得所有基本勾股数" class="headerlink" title="获得所有基本勾股数"></a>获得所有基本勾股数</h4><p>本文只介绍方法，不做证明。</p>
+<p>若对于所有基本勾股数，有$a=2nm,b=n^2-m^2,c=n^2+m^2(n&gt;m且gcd(n,m)=1且n和m奇偶性不同)$。</p>
+<p>于是可以枚举合理的n,m,就能算出对应的勾股数，并且不会重复枚举到。</p>
+<h4 id="获得所有勾股数"><a href="#获得所有勾股数" class="headerlink" title="获得所有勾股数"></a>获得所有勾股数</h4><p>将基本勾股数三个一起乘上一个数即可得到一组新的勾股数。</p>
+<h4 id="一定范围内勾股数的个数"><a href="#一定范围内勾股数的个数" class="headerlink" title="一定范围内勾股数的个数"></a>一定范围内勾股数的个数</h4><p>由于枚举基本勾股数的算法，我们只需算出合法的n,m的个数就能算出基本勾股数的数量。</p>
+<p>而普通勾股数，可以算下每个基本勾股数能乘的系数，加起来就行了。</p>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>斐波那契数列</title>
+    <url>/2022/02/02/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/</url>
+    <content><![CDATA[<h2 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本文用$(x,y)$表示$gcd(x,y)$</p>
+<h3 id="斐波那契数列的定义"><a href="#斐波那契数列的定义" class="headerlink" title="斐波那契数列的定义"></a>斐波那契数列的定义</h3><script type="math/tex; mode=display">fib_{n}=\left\{
+\begin{aligned}
+&0 & & n=0 \\
+&1 & & n=1 \\
+&fib_{n-1}+fib_{n-2} &  & n>1
+\end{aligned}
+\right.</script><h3 id="快速求-fib-n"><a href="#快速求-fib-n" class="headerlink" title="快速求$fib_n$"></a>快速求$fib_n$</h3><p>1.矩阵快速幂</p>
+<p>$\left[ \begin{matrix} fib_{n+1} \\ fib_{n} \end{matrix} \right]$ $=$ ${\left[ \begin{matrix} 1 &amp; 1 \\ 1 &amp; 0 \end{matrix} \right]}^{n}$ $\left[ \begin{matrix} fib_{1} \\ fib_{0} \end{matrix} \right]$ </p>
+<p>2.通项公式（怎么求就先不写了吧。。）</p>
+<p>$fib_{n}$ $=$ $\frac{1}{\sqrt[]{5}} [ {(\frac{1+\sqrt[]{5}}{2})}^{n}-{(\frac{1-\sqrt[]{5}}{2})}^{n}]$</p>
+<p>ps.这个通项公式看起来没用，但如果要求$f_n$对一个数取模，并且5在模数下有二次方根，用通项公式会有奇效。。</p>
+<h3 id="求-fib-n-的前m位（n很大m很小）"><a href="#求-fib-n-的前m位（n很大m很小）" class="headerlink" title="求$fib_n$的前m位（n很大m很小）"></a>求$fib_n$的前m位（n很大m很小）</h3><p>$fib_{n}=\frac{1}{\sqrt[]{5}} [ {(\frac{1+\sqrt[]{5}}{2})}^{n}-{(\frac{1-\sqrt[]{5}}{2})}^{n}]$</p>
+<p>$log10(fib_n)=log10(\frac{1}{\sqrt[]{5}})+log10( {(\frac{1+\sqrt[]{5}}{2})}^{n}-{(\frac{1-\sqrt[]{5}}{2})}^{n})$</p>
+<p>$log10(fib_n)=log10(\frac{1}{\sqrt[]{5}})+nlog10(\frac{1+\sqrt[]{5}}{2})+log10(1-{(\frac{1-\sqrt[]{5}}{1+\sqrt[]{5}})}^{n})$</p>
+<p>考虑从$log10(x)$得到$x$的方法。</p>
+<p>$log10(x)$的小数点左边代表的是10的整数次方，在科学计数法中相当于是$A \cdot {10}^B$中的B，所以小数点右边代表着数位的值。</p>
+<p>所以去掉$log10(x)$的整数部分，剩下的部分用pow算出来，得到的数值就是科学计数法的$A$。</p>
+<p>将$A$乘上$10^{m-1}$就得到答案的前m位了。</p>
+<h3 id="斐波那契和gcd"><a href="#斐波那契和gcd" class="headerlink" title="斐波那契和gcd"></a>斐波那契和gcd</h3><p>1.$(fib_{n},fib_{n-1})=1$</p>
+<p>证明：$(fib_{n},fib_{n-1})=(fib_{n-1}+fib_{n-2},fib_{n-1})=(fib_{n-1},fib_{n-2})=……$</p>
+<p>2.$fib_{n+m}=fib_{n-1}fib_{m}+fib_{n}fib_{m+1}$</p>
+<p>证明：令$m=1$和$m=2$直接计算成立。。。</p>
+<p>然后假设$m=k-1$和$m=k$都成立时，证明$m=k+1$时也成立</p>
+<p>$fib_{n+k+1}=fib_{n+k}+fib_{n+k-1}$</p>
+<p>$fib_{n+k+1}=(fib_{n-1}fib_{k-1}+fib_{n}fib_{k})+(fib_{n-1}fib_{k}+fib_{n}fib_{k+1})$</p>
+<p>$fib_{n+k+1}=fib_{n-1}fib_{k+1}+fib_{n}fib_{k+2}$</p>
+<p>3.$(fib_{n+m},fib_{n})=(fib_{m},fib_{n})$</p>
+<p>证明：$(fib_{n+m},fib_{n})=(fib_{n-1}fib_{m}+fib_{n}fib_{m+1},fib_{n})$</p>
+<p>$(fib_{n+m},fib_{n})=(fib_{n-1}fib_{m},fib_{n})$</p>
+<p>$(fib_{n+m},fib_{n})=(fib_{m},fib_{n})$</p>
+<p>4.$(fib_{n},fib_{m})=fib_{(n,m)}$</p>
+<p>证明：套用c的结论辗转相除即可。</p>
+<p>5.$fib_{n}|fib_{m}$等价于$n|m$</p>
+<p>证明：$a|b$等价于$(a,b)=a$,$fib_{n}|fib_{m}$等价于$fib_{n}=(fib_{n},fib_{m})$</p>
+<p>相当于$fib_{n}=fib_{(n,m)}$，于是$n=(n,m)$</p>
+<p>6.每$n$个连续的斐波那契数有且仅有一个被$fib_{n}$整除</p>
+<p>证明：由e的结论，所有能被$fib_{n}$整除的$fib_{m}$的条件是$n|m$，结论就比较显然了。</p>
+<h3 id="斐波那契的一些恒等式（证明略。。基本都能用数学归纳法）"><a href="#斐波那契的一些恒等式（证明略。。基本都能用数学归纳法）" class="headerlink" title="斐波那契的一些恒等式（证明略。。基本都能用数学归纳法）"></a>斐波那契的一些恒等式（证明略。。基本都能用数学归纳法）</h3><p>1.$\displaystyle \sum_{i=0}^{n}{fib_{i}}=fib_{n+2}-1$</p>
+<p>2.$fib_{1}+fib_{3}+….+fib_{2n-1}=fib_{2n}$</p>
+<p>3.$fib_{2}+fib_{4}+….+fib_{2n}=fib_{2n+1}-1$</p>
+<p>4.$\displaystyle \sum_{i=0}^{n}{fib_{i}}^2=fib_{n}fib_{n+1}$</p>
+<p>5.$\displaystyle \sum_{i=0}^{n}{(i \cdot fib_{i})}=n \cdot fib_{n+2} - fib_{n+3} + 2$</p>
+<h3 id="斐波那契的循环节"><a href="#斐波那契的循环节" class="headerlink" title="斐波那契的循环节"></a>斐波那契的循环节</h3><p>设循环节长度为$m$</p>
+<p>结论：斐波那契数列对某个数$P$取模的循环节长度是$O(P)$级别的。</p>
+<p>1.模数P是任意正整数时，$m\leq 6P$</p>
+<p>2.当5是模P意义下的二次剩余，且P是非5的奇质数，$m\leq P-1$</p>
+<p>3.当5不是模P意义下的二次剩余，且P是非5的奇质数，$m\leq 2P+2$</p>
+<h3 id="齐肯多夫定理"><a href="#齐肯多夫定理" class="headerlink" title="齐肯多夫定理"></a>齐肯多夫定理</h3><p>结论：任何正整数都可以唯一地表示为若干个不连续的斐波那契数之和</p>
+<p>证明：（数学归纳法）</p>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>法雷数列(Farey sequences)和Stern-Brocot树</title>
+    <url>/2022/01/24/%E6%B3%95%E9%9B%B7%E5%BA%8F%E5%88%97%E5%92%8CStern-Brocot%E6%A0%91/</url>
+    <content><![CDATA[<h3 id="法雷数列-Farey-sequences-和Stern-Brocot树"><a href="#法雷数列-Farey-sequences-和Stern-Brocot树" class="headerlink" title="法雷数列(Farey sequences)和Stern-Brocot树"></a>法雷数列(Farey sequences)和Stern-Brocot树</h3><h4 id="Stern-Brocot树"><a href="#Stern-Brocot树" class="headerlink" title="Stern-Brocot树"></a>Stern-Brocot树</h4><p>{$\frac{0}{1}$,$\frac{1}{0}$}</p>
+<p>{$\frac{0}{1}$,$\frac{1}{1}$,$\frac{1}{0}$}</p>
+<p>{$\frac{0}{1}$,$\frac{1}{2}$,$\frac{1}{1}$,$\frac{2}{1}$,$\frac{1}{0}$}</p>
+<p>{$\frac{0}{1}$,$\frac{1}{3}$,$\frac{1}{2}$,$\frac{2}{3}$,$\frac{1}{1}$,$\frac{3}{2}$,$\frac{2}{1}$,$\frac{3}{1}$,$\frac{1}{0}$}</p>
+<p>每次在两个数$\frac{a}{b}$和$\frac{c}{d}$之间增加一个数$\frac{a+c}{b+d}$</p>
+<p>Stern-Brocot树的中序序列满足单调性。</p>
+<p>Stern-Brocot树的元素均为最简分数。</p>
+<p>Stern-Brocot树可以当做平衡二叉树来建立和维护。</p>
+<h4 id="法雷序列"><a href="#法雷序列" class="headerlink" title="法雷序列"></a>法雷序列</h4><p>$F_i$表示分母不超过$i$的最简真分数序列。</p>
+<p>{$\frac{0}{1}$,$\frac{1}{1}$}</p>
+<p>{$\frac{0}{1}$,$\frac{1}{2}$,$\frac{1}{1}$}</p>
+<p>{$\frac{0}{1}$,$\frac{1}{3}$,$\frac{1}{2}$,$\frac{2}{3}$,$\frac{1}{1}$}</p>
+<p>{$\frac{0}{1}$,$\frac{1}{4}$,$\frac{1}{3}$,$\frac{1}{2}$,$\frac{2}{3}$,$\frac{3}{4}$,$\frac{1}{1}$}</p>
+<p>设$F_i$序列长度为$L_i$,则$L_i=1+\sum_{k=1}^{i}\phi(k)$</p>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>辛普森积分法</title>
+    <url>/2022/02/06/%E8%BE%9B%E6%99%AE%E6%A3%AE%E7%A7%AF%E5%88%86%E6%B3%95/</url>
+    <content><![CDATA[<h3 id="普通辛普森积分"><a href="#普通辛普森积分" class="headerlink" title="普通辛普森积分"></a>普通辛普森积分</h3><p>我们一般用小的梯形（即一次函数）近似代表定积分的值.</p>
+<p>$\displaystyle \int_{L}^{R} f(x)dx \approx \int_{L}^{R} Ax+Bdx = \frac{(R-L)(f(L)+f(R))}{2}$</p>
+<p>但是辛普森积分是用二次函数来表示近似值。</p>
+<p>$\displaystyle \int_{L}^{R} f(x)dx \approx \int_{L}^{R} Ax^2+Bx+Cdx=\frac{(R-L)(f(L)+f(R)+4f(\frac{L+R}{2}))}{6}$</p>
+<h3 id="自适应辛普森积分"><a href="#自适应辛普森积分" class="headerlink" title="自适应辛普森积分"></a>自适应辛普森积分</h3><p>不停的二分区间，当$|s(L,M)+s(M,R)-s(L,R)|&lt;15\epsilon$时返回$s(L,M)+s(M,R)+\frac{s(L,M)+s(M,R)-s(L,R)}{15}$</p>
+<p>其中$M=\frac{L+R}{2}$，$\epsilon$为期望容差。</p>
+]]></content>
+      <categories>
+        <category>计算几何</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>连分数和Pell方程</title>
+    <url>/2022/01/22/%E8%BF%9E%E5%88%86%E6%95%B0%E5%92%8CPell%E6%96%B9%E7%A8%8B/</url>
+    <content><![CDATA[<h3 id="连分数"><a href="#连分数" class="headerlink" title="连分数"></a>连分数</h3><p>$x = a_0 + \displaystyle \frac{1}{a_1+\frac{1}{a_2+…}}$</p>
+<h4 id="有理数的连分数表示"><a href="#有理数的连分数表示" class="headerlink" title="有理数的连分数表示"></a>有理数的连分数表示</h4><p>有理数的连分数层数有限。</p>
+<p>可以表示为$x=[a_0;a_1,a_2,a_3…]$</p>
+<h4 id="非完全平方数的平方根的连分数表示"><a href="#非完全平方数的平方根的连分数表示" class="headerlink" title="非完全平方数的平方根的连分数表示"></a>非完全平方数的平方根的连分数表示</h4><p>非完全平方数的平方根的连分数层数是无限并且循环的，并且一个循环的结尾是$2a_0$。</p>
+<p>可以表示为$x=[a_0;a_1,a_2,a_3,…,2a_0,a_1,a_2,…]$</p>
+<p>也可以表示为$x=[a_0;(a_1,a_2,a_3,…,2a_0)]$</p>
+<h4 id="e的连分数表示"><a href="#e的连分数表示" class="headerlink" title="e的连分数表示"></a>e的连分数表示</h4><p>$e = [2;1,2,1,1,4,1,1,6,1,…,1,2k,1]$</p>
+<h3 id="标准型Pell方程"><a href="#标准型Pell方程" class="headerlink" title="标准型Pell方程"></a>标准型Pell方程</h3><h4 id="柿子"><a href="#柿子" class="headerlink" title="柿子"></a>柿子</h4><p>$x^2 - Dy^2 =1$</p>
+<h4 id="平凡解"><a href="#平凡解" class="headerlink" title="平凡解"></a>平凡解</h4><p>显然有解$(\pm 1,0)$</p>
+<h4 id="特解（最小解）"><a href="#特解（最小解）" class="headerlink" title="特解（最小解）"></a>特解（最小解）</h4><p>首先得到$\sqrt{D}$的连分数表示$D=[a_0;(a_1,a_2,a_3,…,2a_0)]$。</p>
+<p>去掉最后一项并令正整数$x_1,y_1$满足$\frac{x_1}{y_1}=[a_0;a_1,a_2,a_3,…]$。</p>
+<p>（$sqrt{D}$的连分数的单个循环并且去掉最后一项）</p>
+<p>通过类似辗转相除的方式得到特解$(x_1,y_1)$，注意这里大概率需要高精度。</p>
+<h4 id="通解"><a href="#通解" class="headerlink" title="通解"></a>通解</h4><p>$x_i + y_i\sqrt{D}= {(x_1+y_1\sqrt{D})}^i$</p>
+<p>递推式：</p>
+<p>$x_{i+1}=x_1x_i+Dy_1y_i$</p>
+<p>$y_{i+1}=x_1y_i+x_iy_1$</p>
+<h3 id="一般型Pell方程"><a href="#一般型Pell方程" class="headerlink" title="一般型Pell方程"></a>一般型Pell方程</h3><h4 id="婆罗摩笈多-斐波那契恒等式"><a href="#婆罗摩笈多-斐波那契恒等式" class="headerlink" title="婆罗摩笈多-斐波那契恒等式"></a>婆罗摩笈多-斐波那契恒等式</h4><p>$(a^2+b^2)(c^2+d^2)=(ac \mp bd)^2+(ad \pm bc)^2$</p>
+<h4 id="一般型Pell方程-1"><a href="#一般型Pell方程-1" class="headerlink" title="一般型Pell方程"></a>一般型Pell方程</h4><p>$x^2 - Dy^2 =k$</p>
+<h4 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h4><p>先找到第一组解${x_0}^2 - D{y_0}^2 = k$（使用连分数，或者暴力找）</p>
+<p>定义标准型Pell方程$r^2-Ds^2=1$</p>
+<p>利用婆罗摩笈多-斐波那契恒等式：$k=k \cdot 1=({x_0}^2-D{y_0}^2)(r^2-Ds^2)=({x_0}r+D{y_0}s)^2-D({x_0}s+{y_0}r)^2$</p>
+<p>于是得到$x={x_0}r+D{y_0}s,y={x_0}s+{y_0}r$，不停迭代即可得到所有整数解</p>
+<h3 id="没有xy项的二次丢番图方程"><a href="#没有xy项的二次丢番图方程" class="headerlink" title="没有xy项的二次丢番图方程"></a>没有xy项的二次丢番图方程</h3><p>$Ax^2+Bx+Cy^2+Dy+E=0$</p>
+<p>配成$x^2-Ny^2=K$的形式，然后用一般型Pell方程来解。</p>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+  </entry>
+</search>
