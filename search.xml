@@ -46,7 +46,7 @@
 <p>令第一象限离x轴正方向最近的n次单位根记为$\omega_{n}^{1}$，那么按照逆时针顺序第i个n次单位根就是$\omega_{n}^{i}$。</p>
 <h4 id="单位根的一些性质"><a href="#单位根的一些性质" class="headerlink" title="单位根的一些性质"></a>单位根的一些性质</h4><p>$ \omega_{2n}^{i}+\omega_{2n}^{i+n}=0 $ </p>
 <p>$ \omega_{kn}^{ki}=\omega_{n}^{i} $ </p>
-<p>$ \omega_{n}^{i}=\omega_{n}^{i%n} $ </p>
+<p>$ \omega_{n}^{i}=\omega_{n}^{i \mod n} $ </p>
 <h4 id="单位根反演柿子"><a href="#单位根反演柿子" class="headerlink" title="单位根反演柿子"></a>单位根反演柿子</h4><p>$[n|k]=\frac{1}{n}\sum_{i=0}^{n-1}w_{n}^{ik}$</p>
 <h4 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h4><p>当$[k|n]=1$时，令$k=tn$</p>
 <p>则$\frac{1}{n}\sum_{i=0}^{n-1}w_{n}^{ik}=\frac{1}{n}\sum_{i=0}^{n-1}w_{n}^{itn}=1$</p>
