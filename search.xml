@@ -1,29 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>不常用数学公式整理1</title>
-    <url>/2022/02/04/%E4%B8%8D%E5%B8%B8%E7%94%A8%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%95%B4%E7%90%861/</url>
-    <content><![CDATA[<h3 id="不常用数学公式整理1"><a href="#不常用数学公式整理1" class="headerlink" title="不常用数学公式整理1"></a>不常用数学公式整理1</h3><h4 id="威尔逊定理"><a href="#威尔逊定理" class="headerlink" title="威尔逊定理"></a>威尔逊定理</h4><p>$(p-1)!$ $\equiv$ $p-1$ $(mod$  $p)$ ( $p$ 是质数)</p>
-]]></content>
-      <categories>
-        <category>数学</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>拉格朗日插值</title>
-    <url>/2022/02/01/%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E6%8F%92%E5%80%BC/</url>
-    <content><![CDATA[<h3 id="拉格朗日插值"><a href="#拉格朗日插值" class="headerlink" title="拉格朗日插值"></a>拉格朗日插值</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>一个$n$次多项式$F(x)=\sum_{i=0}^{n}A_ix^i$的$n+1$个点值$（x_i,y_i）$。</p>
-<p>求$F(m)$的值，对一个数取模（也可能不取模）,m很大。</p>
-<h4 id="拉格朗日插值法"><a href="#拉格朗日插值法" class="headerlink" title="拉格朗日插值法"></a>拉格朗日插值法</h4><p>令$L_j(x)= \prod_{i=0,i\neq j}^{n} \frac{x-x_i}{x_j-x_i}$</p>
-<p>可以发现$L_j(x)$在$x=x_j$时为1，在$x=x_i(i \neq j)$时为0</p>
-<p>于是原多项式可以表示为$F(x)=\sum_{i=0}^{n}y_iL_i(x)$</p>
-<p>于是我们得到了一种$O(n^2)$的插值方法。</p>
-]]></content>
-      <categories>
-        <category>多项式</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2022/01/18/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -38,6 +15,15 @@
 ]]></content>
   </entry>
   <entry>
+    <title>不常用数学公式整理1</title>
+    <url>/2022/02/04/%E4%B8%8D%E5%B8%B8%E7%94%A8%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%95%B4%E7%90%861/</url>
+    <content><![CDATA[<h3 id="不常用数学公式整理1"><a href="#不常用数学公式整理1" class="headerlink" title="不常用数学公式整理1"></a>不常用数学公式整理1</h3><h4 id="威尔逊定理"><a href="#威尔逊定理" class="headerlink" title="威尔逊定理"></a>威尔逊定理</h4><p>$(p-1)!$ $\equiv$ $p-1$ $(mod$  $p)$ ( $p$ 是质数)</p>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+  </entry>
+  <entry>
     <title>勾股数</title>
     <url>/2022/01/25/%E5%8B%BE%E8%82%A1%E6%95%B0/</url>
     <content><![CDATA[<h3 id="勾股数"><a href="#勾股数" class="headerlink" title="勾股数"></a>勾股数</h3><p>令三个正整数$a,b,c$满足$a^2+b^2=c^2$,则认为这3个数组成的三元组为勾股数。</p>
@@ -48,6 +34,26 @@
 <h4 id="获得所有勾股数"><a href="#获得所有勾股数" class="headerlink" title="获得所有勾股数"></a>获得所有勾股数</h4><p>将基本勾股数三个一起乘上一个数即可得到一组新的勾股数。</p>
 <h4 id="一定范围内勾股数的个数"><a href="#一定范围内勾股数的个数" class="headerlink" title="一定范围内勾股数的个数"></a>一定范围内勾股数的个数</h4><p>由于枚举基本勾股数的算法，我们只需算出合法的n,m的个数就能算出基本勾股数的数量。</p>
 <p>而普通勾股数，可以算下每个基本勾股数能乘的系数，加起来就行了。</p>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>单位根反演</title>
+    <url>/2022/02/16/%E5%8D%95%E4%BD%8D%E6%A0%B9%E5%8F%8D%E6%BC%94/</url>
+    <content><![CDATA[<h3 id="单位根反演"><a href="#单位根反演" class="headerlink" title="单位根反演"></a>单位根反演</h3><h4 id="单位根"><a href="#单位根" class="headerlink" title="单位根"></a>单位根</h4><p>$Z^n=1$，则称$Z$为n次单位根，容易发现在复数域中有n个n次单位根，并且n个根等分以原点为圆心的单位圆。</p>
+<p>令第一象限离x轴正方向最近的n次单位根记为$\omega_{n}^{1}$，那么按照逆时针顺序第i个n次单位根就是$\omega_{n}^{i}$。</p>
+<h4 id="单位根的一些性质"><a href="#单位根的一些性质" class="headerlink" title="单位根的一些性质"></a>单位根的一些性质</h4><p>$ \omega_{2n}^{i}+\omega_{2n}^{i+n}=0 $ </p>
+<p>$ \omega_{kn}^{ki}=\omega_{n}^{i} $ </p>
+<p>$ \omega_{n}^{i}=\omega_{n}^{i%n} $ </p>
+<h4 id="单位根反演柿子"><a href="#单位根反演柿子" class="headerlink" title="单位根反演柿子"></a>单位根反演柿子</h4><p>$[n|k]=\frac{1}{n}\sum_{i=0}^{n-1}w_{n}^{ik}$</p>
+<h4 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h4><p>当$[k|n]=1$时，令$k=tn$</p>
+<p>则$\frac{1}{n}\sum_{i=0}^{n-1}w_{n}^{ik}=\frac{1}{n}\sum_{i=0}^{n-1}w_{n}^{itn}=1$</p>
+<p>当$[k|n] \neq 1$时，令$k=tn$</p>
+<p>则$\frac{1}{n}\sum_{i=0}^{n-1}w_{n}^{ik}=\frac{w_{n}^{0}-w_{n}^{kn}}{n(1-w_{n}^{k})}=1$</p>
+<h4 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h4><p>对于一些容易得到点值的多项式，用单位根反演可以容易得到k的倍数次数的系数之和。</p>
+<p>即求$\sum_{i=0}^{\lfloor \frac{n}{k} \rfloor} [ x^{ik} ] f(x)$</p>
 ]]></content>
       <categories>
         <category>数学</category>
@@ -112,39 +118,17 @@
       </categories>
   </entry>
   <entry>
-    <title>法雷数列(Farey sequences)和Stern-Brocot树</title>
-    <url>/2022/01/24/%E6%B3%95%E9%9B%B7%E5%BA%8F%E5%88%97%E5%92%8CStern-Brocot%E6%A0%91/</url>
-    <content><![CDATA[<h3 id="法雷数列-Farey-sequences-和Stern-Brocot树"><a href="#法雷数列-Farey-sequences-和Stern-Brocot树" class="headerlink" title="法雷数列(Farey sequences)和Stern-Brocot树"></a>法雷数列(Farey sequences)和Stern-Brocot树</h3><h4 id="Stern-Brocot树"><a href="#Stern-Brocot树" class="headerlink" title="Stern-Brocot树"></a>Stern-Brocot树</h4><p>{$\frac{0}{1}$,$\frac{1}{0}$}</p>
-<p>{$\frac{0}{1}$,$\frac{1}{1}$,$\frac{1}{0}$}</p>
-<p>{$\frac{0}{1}$,$\frac{1}{2}$,$\frac{1}{1}$,$\frac{2}{1}$,$\frac{1}{0}$}</p>
-<p>{$\frac{0}{1}$,$\frac{1}{3}$,$\frac{1}{2}$,$\frac{2}{3}$,$\frac{1}{1}$,$\frac{3}{2}$,$\frac{2}{1}$,$\frac{3}{1}$,$\frac{1}{0}$}</p>
-<p>每次在两个数$\frac{a}{b}$和$\frac{c}{d}$之间增加一个数$\frac{a+c}{b+d}$</p>
-<p>Stern-Brocot树的中序序列满足单调性。</p>
-<p>Stern-Brocot树的元素均为最简分数。</p>
-<p>Stern-Brocot树可以当做平衡二叉树来建立和维护。</p>
-<h4 id="法雷序列"><a href="#法雷序列" class="headerlink" title="法雷序列"></a>法雷序列</h4><p>$F_i$表示分母不超过$i$的最简真分数序列。</p>
-<p>{$\frac{0}{1}$,$\frac{1}{1}$}</p>
-<p>{$\frac{0}{1}$,$\frac{1}{2}$,$\frac{1}{1}$}</p>
-<p>{$\frac{0}{1}$,$\frac{1}{3}$,$\frac{1}{2}$,$\frac{2}{3}$,$\frac{1}{1}$}</p>
-<p>{$\frac{0}{1}$,$\frac{1}{4}$,$\frac{1}{3}$,$\frac{1}{2}$,$\frac{2}{3}$,$\frac{3}{4}$,$\frac{1}{1}$}</p>
-<p>设$F_i$序列长度为$L_i$,则$L_i=1+\sum_{k=1}^{i}\phi(k)$</p>
+    <title>拉格朗日插值</title>
+    <url>/2022/02/01/%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E6%8F%92%E5%80%BC/</url>
+    <content><![CDATA[<h3 id="拉格朗日插值"><a href="#拉格朗日插值" class="headerlink" title="拉格朗日插值"></a>拉格朗日插值</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>一个$n$次多项式$F(x)=\sum_{i=0}^{n}A_ix^i$的$n+1$个点值$（x_i,y_i）$。</p>
+<p>求$F(m)$的值，对一个数取模（也可能不取模）,m很大。</p>
+<h4 id="拉格朗日插值法"><a href="#拉格朗日插值法" class="headerlink" title="拉格朗日插值法"></a>拉格朗日插值法</h4><p>令$L_j(x)= \prod_{i=0,i\neq j}^{n} \frac{x-x_i}{x_j-x_i}$</p>
+<p>可以发现$L_j(x)$在$x=x_j$时为1，在$x=x_i(i \neq j)$时为0</p>
+<p>于是原多项式可以表示为$F(x)=\sum_{i=0}^{n}y_iL_i(x)$</p>
+<p>于是我们得到了一种$O(n^2)$的插值方法。</p>
 ]]></content>
       <categories>
-        <category>数学</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>辛普森积分法</title>
-    <url>/2022/02/06/%E8%BE%9B%E6%99%AE%E6%A3%AE%E7%A7%AF%E5%88%86%E6%B3%95/</url>
-    <content><![CDATA[<h3 id="普通辛普森积分"><a href="#普通辛普森积分" class="headerlink" title="普通辛普森积分"></a>普通辛普森积分</h3><p>我们一般用小的梯形（即一次函数）近似代表定积分的值.</p>
-<p>$\displaystyle \int_{L}^{R} f(x)dx \approx \int_{L}^{R} Ax+Bdx = \frac{(R-L)(f(L)+f(R))}{2}$</p>
-<p>但是辛普森积分是用二次函数来表示近似值。</p>
-<p>$\displaystyle \int_{L}^{R} f(x)dx \approx \int_{L}^{R} Ax^2+Bx+Cdx=\frac{(R-L)(f(L)+f(R)+4f(\frac{L+R}{2}))}{6}$</p>
-<h3 id="自适应辛普森积分"><a href="#自适应辛普森积分" class="headerlink" title="自适应辛普森积分"></a>自适应辛普森积分</h3><p>不停的二分区间，当$|s(L,M)+s(M,R)-s(L,R)|&lt;15\epsilon$时返回$s(L,M)+s(M,R)+\frac{s(L,M)+s(M,R)-s(L,R)}{15}$</p>
-<p>其中$M=\frac{L+R}{2}$，$\epsilon$为期望容差。</p>
-]]></content>
-      <categories>
-        <category>计算几何</category>
+        <category>多项式</category>
       </categories>
   </entry>
   <entry>
@@ -175,6 +159,42 @@
 <p>于是得到$x={x_0}r+D{y_0}s,y={x_0}s+{y_0}r$，不停迭代即可得到所有整数解</p>
 <h3 id="没有xy项的二次丢番图方程"><a href="#没有xy项的二次丢番图方程" class="headerlink" title="没有xy项的二次丢番图方程"></a>没有xy项的二次丢番图方程</h3><p>$Ax^2+Bx+Cy^2+Dy+E=0$</p>
 <p>配成$x^2-Ny^2=K$的形式，然后用一般型Pell方程来解。</p>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>辛普森积分法</title>
+    <url>/2022/02/06/%E8%BE%9B%E6%99%AE%E6%A3%AE%E7%A7%AF%E5%88%86%E6%B3%95/</url>
+    <content><![CDATA[<h3 id="普通辛普森积分"><a href="#普通辛普森积分" class="headerlink" title="普通辛普森积分"></a>普通辛普森积分</h3><p>我们一般用小的梯形（即一次函数）近似代表定积分的值.</p>
+<p>$\displaystyle \int_{L}^{R} f(x)dx \approx \int_{L}^{R} Ax+Bdx = \frac{(R-L)(f(L)+f(R))}{2}$</p>
+<p>但是辛普森积分是用二次函数来表示近似值。</p>
+<p>$\displaystyle \int_{L}^{R} f(x)dx \approx \int_{L}^{R} Ax^2+Bx+Cdx=\frac{(R-L)(f(L)+f(R)+4f(\frac{L+R}{2}))}{6}$</p>
+<h3 id="自适应辛普森积分"><a href="#自适应辛普森积分" class="headerlink" title="自适应辛普森积分"></a>自适应辛普森积分</h3><p>不停的二分区间，当$|s(L,M)+s(M,R)-s(L,R)|&lt;15\epsilon$时返回$s(L,M)+s(M,R)+\frac{s(L,M)+s(M,R)-s(L,R)}{15}$</p>
+<p>其中$M=\frac{L+R}{2}$，$\epsilon$为期望容差。</p>
+]]></content>
+      <categories>
+        <category>计算几何</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>法雷数列(Farey sequences)和Stern-Brocot树</title>
+    <url>/2022/01/24/%E6%B3%95%E9%9B%B7%E5%BA%8F%E5%88%97%E5%92%8CStern-Brocot%E6%A0%91/</url>
+    <content><![CDATA[<h3 id="法雷数列-Farey-sequences-和Stern-Brocot树"><a href="#法雷数列-Farey-sequences-和Stern-Brocot树" class="headerlink" title="法雷数列(Farey sequences)和Stern-Brocot树"></a>法雷数列(Farey sequences)和Stern-Brocot树</h3><h4 id="Stern-Brocot树"><a href="#Stern-Brocot树" class="headerlink" title="Stern-Brocot树"></a>Stern-Brocot树</h4><p>{$\frac{0}{1}$,$\frac{1}{0}$}</p>
+<p>{$\frac{0}{1}$,$\frac{1}{1}$,$\frac{1}{0}$}</p>
+<p>{$\frac{0}{1}$,$\frac{1}{2}$,$\frac{1}{1}$,$\frac{2}{1}$,$\frac{1}{0}$}</p>
+<p>{$\frac{0}{1}$,$\frac{1}{3}$,$\frac{1}{2}$,$\frac{2}{3}$,$\frac{1}{1}$,$\frac{3}{2}$,$\frac{2}{1}$,$\frac{3}{1}$,$\frac{1}{0}$}</p>
+<p>每次在两个数$\frac{a}{b}$和$\frac{c}{d}$之间增加一个数$\frac{a+c}{b+d}$</p>
+<p>Stern-Brocot树的中序序列满足单调性。</p>
+<p>Stern-Brocot树的元素均为最简分数。</p>
+<p>Stern-Brocot树可以当做平衡二叉树来建立和维护。</p>
+<h4 id="法雷序列"><a href="#法雷序列" class="headerlink" title="法雷序列"></a>法雷序列</h4><p>$F_i$表示分母不超过$i$的最简真分数序列。</p>
+<p>{$\frac{0}{1}$,$\frac{1}{1}$}</p>
+<p>{$\frac{0}{1}$,$\frac{1}{2}$,$\frac{1}{1}$}</p>
+<p>{$\frac{0}{1}$,$\frac{1}{3}$,$\frac{1}{2}$,$\frac{2}{3}$,$\frac{1}{1}$}</p>
+<p>{$\frac{0}{1}$,$\frac{1}{4}$,$\frac{1}{3}$,$\frac{1}{2}$,$\frac{2}{3}$,$\frac{3}{4}$,$\frac{1}{1}$}</p>
+<p>设$F_i$序列长度为$L_i$,则$L_i=1+\sum_{k=1}^{i}\phi(k)$</p>
 ]]></content>
       <categories>
         <category>数学</category>
