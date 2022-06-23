@@ -1,10 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2022/01/18/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>不常用数学公式整理1</title>
     <url>/2022/02/04/%E4%B8%8D%E5%B8%B8%E7%94%A8%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%95%B4%E7%90%861/</url>
     <content><![CDATA[<h3 id="不常用数学公式整理1"><a href="#不常用数学公式整理1" class="headerlink" title="不常用数学公式整理1"></a>不常用数学公式整理1</h3><h4 id="威尔逊定理"><a href="#威尔逊定理" class="headerlink" title="威尔逊定理"></a>威尔逊定理</h4><p>$(p-1)!$ $\equiv$ $p-1$ $(mod$  $p)$ ( $p$ 是质数)</p>
 ]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>一些比较实用的技巧</title>
+    <url>/2022/04/17/%E4%B8%80%E4%BA%9B%E6%AF%94%E8%BE%83%E5%AE%9E%E7%94%A8%E7%9A%84%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<h3 id="一些比较实用的技巧"><a href="#一些比较实用的技巧" class="headerlink" title="一些比较实用的技巧"></a>一些比较实用的技巧</h3><h4 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h4><p>手写二分挺麻烦的，如果要在一个数组上询问是否存在某个数的话可以直接用自带的函数</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">binary_search</span>(V.<span class="built_in">begin</span>(), V.<span class="built_in">end</span>(), x)</span><br></pre></td></tr></table></figure>
+<h4 id="数字转字符串"><a href="#数字转字符串" class="headerlink" title="数字转字符串"></a>数字转字符串</h4><p>把一个数字x转化为string，并且是带符号的，很好用！</p>
+<p>注意在x是浮点数类型的时候，转化出的字符串只保留小数点后6位并且四舍五入。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">to_string</span>(x)</span><br></pre></td></tr></table></figure>
+<h4 id="离散化"><a href="#离散化" class="headerlink" title="离散化"></a>离散化</h4><p>对一组有序的数字进行离散化</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sort</span>(a,a+n);</span><br><span class="line"><span class="keyword">int</span> cnt=<span class="built_in">unique</span>(a,a+n)-a;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>多项式</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>二次剩余</title>
+    <url>/2022/05/07/%E4%BA%8C%E6%AC%A1%E5%89%A9%E4%BD%99/</url>
+    <content><![CDATA[<h3 id="二次剩余"><a href="#二次剩余" class="headerlink" title="二次剩余"></a>二次剩余</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>已知$n,P$，求$x$满足$x^2 \equiv n\mod P$</p>
+<h4 id="解的个数"><a href="#解的个数" class="headerlink" title="解的个数"></a>解的个数</h4><p>若存在满足条件的x，则称$n$为模$P$的二次剩余，否则称为模$P$的二次非剩余。</p>
+<p>若存在多个$x$满足问题，设两个数$x_1,x_2(x_1 \neq x_2,0 \leq x_1,x_2 \leq P-1)$满足$x^2 \equiv n\mod P$</p>
+<p>$x_1^2 - x_2^2 \equiv 0 \mod P$</p>
+<p>$(x_1-x_2)(x_1+x_2) \equiv 0 \mod P$</p>
+<p>因为$x_1 \neq x_2$,所以$x_1 + x_2 \equiv 0 \mod P$</p>
+<p>当两个数是相反数的时候，他们的平方是同余的。</p>
+<p>除了0以外一共$ \frac{(P-1)}{2}$对相反数，所以有一半的数是二次剩余，一半是二次非剩余。</p>
+<h4 id="n-0"><a href="#n-0" class="headerlink" title="n=0"></a>n=0</h4><p>此时一定是二次剩余，$x=0$。</p>
+<h4 id="P为奇素数"><a href="#P为奇素数" class="headerlink" title="P为奇素数"></a>P为奇素数</h4><p>首先判断一下n是不是二次剩余。</p>
+<p>由于$P$是奇素数，我们可以知道存在$P$有一个原根$g$。</p>
+<p>那么令$n=g^h$,若n是二次剩余，则其中的$h$需要是个偶数。</p>
+<p>然后这里就有一个很奇妙的操作:$n^{ \frac{(P-1)}{2} } = g^{h \frac{(P-1)}{2}}$</p>
+<p>如果$h$是偶数：$g^{h \frac{(P-1)}{2}} = g^{(P-1) \frac{h}{2}} = 1$</p>
+<p>如果$h$是奇数：$g^{h \frac{(P-1)}{2}} = g^{(P-1) \lfloor \frac{h}{2} \rfloor + \frac{(P-1)}{2}} = g^{\frac{(P-1)}{2}} = -1$</p>
+<p>所以是不是二次剩余，只需要对$n$算一遍$ \frac{(P-1)}{2}$次幂。</p>
+<p>然后考虑构造方案。</p>
+<p>先找到一个$a$满足$a^2-n$是二次非剩余。</p>
+<p>令$w^2 = a^2-n$</p>
+<p>然后发现$w$有一个神奇的性质：$w^P \equiv w(w^2)^{ \frac{(P-1)}{2} } \equiv w(a^2-n)^{ \frac{(P-1)}{2} }=-w \mod P$</p>
+<p>发现这跟费马小定理居然是相反的：$a^P=a \mod P$</p>
+<p>因为$w$实际上类似于虚数，我们运算中也要当做虚数算。</p>
+<p>$(a+w)^{P+1} \equiv (a^P + w^P)(a+w) \equiv (a-w)(a+w) \equiv a^2-w^2 \equiv n \mod P$</p>
+<p>于是$x \equiv (a+w)^{\frac{P+1}{2}} \mod P$</p>
+<h4 id="P是质数的幂次，并且np不互质"><a href="#P是质数的幂次，并且np不互质" class="headerlink" title="P是质数的幂次，并且np不互质"></a>P是质数的幂次，并且np不互质</h4><p>假设$P=p^k$，$n$是二次剩余，$x=P^ab$，$n=P^{2a}b^2$。</p>
+<p>能够发现$n$中$P$的次数必须是偶数,并且小于$k$，否则不是二次剩余。</p>
+<p>式子可以转化为$b^2 \equiv n/(P^{2a}) \mod p^{k-2a}$</p>
+<p>问题能转化为np互质的情况。</p>
+<h4 id="P是2的幂次，并且np互质"><a href="#P是2的幂次，并且np互质" class="headerlink" title="P是2的幂次，并且np互质"></a>P是2的幂次，并且np互质</h4><p>奇数的平方模8余1，所以当$n \equiv 1 \mod 8$时，n是二次剩余。</p>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>形如4x^2+1的数的质因数分解</title>
+    <url>/2022/04/18/%E5%A4%9A%E9%A1%B9%E5%BC%8Ff(x)=4x%5E2+1%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/</url>
+    <content><![CDATA[<h3 id="形如4x-2-1的数的质因数分解"><a href="#形如4x-2-1的数的质因数分解" class="headerlink" title="形如4x^2+1的数的质因数分解"></a>形如4x^2+1的数的质因数分解</h3><p>最近做了个题，求$\sum_{i=1}^{10000000} maxPrime(4i^2+1)$</p>
+<p>考虑对前$10000000$个数求$4i^2+1$的质因数。</p>
+<p>先考虑暴力筛质因数，先处理2i之内的所有质数，超过2i的素数可以把根号内的素数筛完之后剩下的得到。</p>
+<p>首先对20000000之内筛一下质数，发现有百万级别个质数。</p>
+<p>这样的话暴力做需要$10000000 \ cdot 1000000$级别的计算量，肯定是寄了。</p>
+<p>根据初等数论的结论，能够表示为$x^2 + y^2（xy互质）$的数，不含有形如$4k+3$的质数。</p>
+<p>然后$4i^2+1$显然满足这条件，而且还是奇数，所以我们只用考虑形如$4k+1$的质数。</p>
+<p>然后再筛选一下可用质数，现在只剩下几十万个了。但是显然还是寄。</p>
+<p>如果$p|4(x)^2+1$，那么$p|4(x+p)^2+1$也满足。</p>
+<p>于是我们一找到一对$p,x$满足上述条件，就能把各个第$x+tp$项的数中的质因数p给除掉。</p>
+<p>如果$p|4(x)^2+1$，那么$p|4(p-x)^2+1$也满足。</p>
+<p>于是我们一找到一对$p,x$满足上述条件，就能把各个第$p-x+tp$项的数中的质因数p给除掉。</p>
+<p>然后我们发现去掉已知质数之后，我们枚举的那根号级别的试除居然一次都没有成功。</p>
+<p>那么起作用的就只剩下一开始就剩下的哪些质数了。</p>
+<p>感觉讲的也不是很清楚，直接丢代码好了。</p>
+<p>总的效率就相当于是$\sum_{prime} n/prime = nloglogn$</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">nums = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">10000001</span>):</span><br><span class="line">    nums.append(i * i * <span class="number">4</span> + <span class="number">1</span>)</span><br><span class="line">ans = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">10000001</span>):</span><br><span class="line">    ans.append(<span class="number">0</span>)</span><br><span class="line">n = <span class="built_in">len</span>(nums)</span><br><span class="line">js = <span class="number">0</span></span><br><span class="line"><span class="comment">#print(n)</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,n):</span><br><span class="line">    <span class="keyword">if</span>(nums[i] &gt; <span class="number">1</span>):</span><br><span class="line">        p = nums[i]</span><br><span class="line">        j = i</span><br><span class="line">        <span class="keyword">while</span> (j &lt; <span class="number">10000001</span>):</span><br><span class="line">            <span class="keyword">while</span>(nums[j] % p == <span class="number">0</span>):</span><br><span class="line">                 nums[j] = nums[j] // p</span><br><span class="line">            ans[j] = <span class="built_in">max</span>(ans[j],p)</span><br><span class="line">            j += p</span><br><span class="line">        j = p - i</span><br><span class="line">        <span class="keyword">while</span> (j &lt; <span class="number">10000001</span>):</span><br><span class="line">            <span class="keyword">while</span>(nums[j] % p == <span class="number">0</span>):</span><br><span class="line">                nums[j] = nums[j] // p</span><br><span class="line">            ans[j] = <span class="built_in">max</span>(ans[j],p)</span><br><span class="line">            j += p</span><br><span class="line">su = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">10000001</span>):</span><br><span class="line">    su += ans[i]</span><br><span class="line"><span class="built_in">print</span>(su)</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>数学</category>
       </categories>
@@ -20,160 +110,6 @@
 <h4 id="获得所有勾股数"><a href="#获得所有勾股数" class="headerlink" title="获得所有勾股数"></a>获得所有勾股数</h4><p>将基本勾股数三个一起乘上一个数即可得到一组新的勾股数。</p>
 <h4 id="一定范围内勾股数的个数"><a href="#一定范围内勾股数的个数" class="headerlink" title="一定范围内勾股数的个数"></a>一定范围内勾股数的个数</h4><p>由于枚举基本勾股数的算法，我们只需算出合法的n,m的个数就能算出基本勾股数的数量。</p>
 <p>而普通勾股数，可以算下每个基本勾股数能乘的系数，加起来就行了。</p>
-]]></content>
-      <categories>
-        <category>数学</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2022/01/18/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>快速沃尔什变换</title>
-    <url>/2022/04/16/%E5%BF%AB%E9%80%9F%E6%B2%83%E5%B0%94%E4%BB%80%E5%8F%98%E6%8D%A2/</url>
-    <content><![CDATA[<h3 id="快速沃尔什变换（位运算卷积）"><a href="#快速沃尔什变换（位运算卷积）" class="headerlink" title="快速沃尔什变换（位运算卷积）"></a>快速沃尔什变换（位运算卷积）</h3><p>已知$A_i$和$B_i$,求$\displaystyle C_k=\sum_{i \bigoplus j=k}A_iB_j$。</p>
-<p>首先可以构造三个矩阵$T_1,T_2,T_3$。使得$T_1A \cdot T_2B=T_3C$</p>
-<p>可以看出左边是个点乘的式子，将某一位展开。</p>
-<p>$\displaystyle \sum_{i=0}^{n} T_1(x,i)A_i\sum_{j=0}^{n} T_2(x,j)B_j=\sum_{k=0}^{n} T_1(x,k)C_k$</p>
-<p>显然，如果三个矩阵满足$T_1(x,i) * T(x,j) = T(x,k) (i \bigoplus j=k)$,那么就能满足$\displaystyle C_k=\sum_{i \bigoplus j=k}A_iB_j$，这就是我们要的式子。</p>
-<p>在得到三个矩阵之后，按照式子算出$T_3C$,然后再用${T_3}^{-1}$来得到$C$。</p>
-<p><strong>一个我不会证的结论</strong>：无论$\bigoplus$是任何运算，$T_!T_2T_3$中的元素都可以只由$\{-1,0,1\}$组成。</p>
-<p>于是我们可以用最暴力的方法枚举所有可能性，一共$3^{4 * 3}=531441$种可能。</p>
-<p>然后对于每种可能，先看$C$是否可逆（计算行列式$det(C)&gt;0$）。然后判断是否满足$T_1(x,i) * T(x,j) = T(x,k) (i \bigoplus j=k)$。</p>
-<p>两个条件都满足的话，那三个矩阵就找到了。这时候我们要求${T_3}^{-1}$。</p>
-<p>$\displaystyle \left( \begin{matrix} a &amp; b \\ c &amp; d \end{matrix} \right)^{-1}=\frac{1}{ad-bc}\left( \begin{matrix} d &amp; -b \\ -c &amp; a \end{matrix} \right)$</p>
-<p>求$T_1A$的方法就是类似FFT的过程。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">LL T[<span class="number">3</span>][<span class="number">2</span>][<span class="number">2</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">findFWT</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> l=<span class="number">0</span>;l&lt;<span class="number">531441</span>;++l)&#123;</span><br><span class="line">		<span class="keyword">int</span> tmp=l;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;<span class="number">3</span>;++k)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;++i)&#123;</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">2</span>;++j)&#123;</span><br><span class="line">					T[k][i][j]=<span class="number">1</span>-tmp%<span class="number">3</span>;</span><br><span class="line">					tmp/=<span class="number">3</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> det=T[<span class="number">2</span>][<span class="number">0</span>][<span class="number">0</span>]*T[<span class="number">2</span>][<span class="number">1</span>][<span class="number">1</span>]-T[<span class="number">2</span>][<span class="number">0</span>][<span class="number">1</span>]*T[<span class="number">2</span>][<span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">		<span class="keyword">if</span>(!det) <span class="keyword">continue</span>;</span><br><span class="line">		<span class="keyword">bool</span> f=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;<span class="number">2</span>;++k)&#123;</span><br><span class="line">			<span class="keyword">int</span> cnf[<span class="number">4</span>]=&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>&#125;;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;++i)&#123;</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">2</span>;++j)&#123;</span><br><span class="line">					cnf[i&lt;&lt;<span class="number">1</span>|j]+=T[<span class="number">0</span>][k][i]*T[<span class="number">1</span>][k][j];</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;++i)</span><br><span class="line">				<span class="keyword">if</span>(cnf[i]!=T[<span class="number">2</span>][k][((x&gt;&gt;i)&amp;<span class="number">1</span>)])</span><br><span class="line">					f=<span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(f)&#123;</span><br><span class="line">			<span class="built_in">swap</span>(T[<span class="number">2</span>][<span class="number">0</span>][<span class="number">0</span>],T[<span class="number">2</span>][<span class="number">1</span>][<span class="number">1</span>]);</span><br><span class="line">			T[<span class="number">2</span>][<span class="number">0</span>][<span class="number">1</span>]*=<span class="number">-1</span>;</span><br><span class="line">			T[<span class="number">2</span>][<span class="number">1</span>][<span class="number">0</span>]*=<span class="number">-1</span>;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++)</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">2</span>;j++)&#123;</span><br><span class="line">					T[<span class="number">2</span>][i][j]=T[<span class="number">2</span>][i][j]*<span class="number">2</span>/det;</span><br><span class="line">				&#125;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">FWT</span><span class="params">(LL *a,<span class="keyword">int</span> n,<span class="keyword">int</span> flag)</span></span>&#123;</span><br><span class="line">	LL x,y;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> l=<span class="number">2</span>;l&lt;=n;l&lt;&lt;=<span class="number">1</span>)&#123;</span><br><span class="line">		<span class="keyword">int</span> m=l&gt;&gt;<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span>(LL *p=a;p!=a+n;p+=l)</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;m;++k)&#123;</span><br><span class="line">				x=p[k];y=p[k+m];</span><br><span class="line">				p[k]=(T[flag][<span class="number">0</span>][<span class="number">0</span>]*x+T[flag][<span class="number">0</span>][<span class="number">1</span>]*y)%P;</span><br><span class="line">				p[k+m]=(T[flag][<span class="number">1</span>][<span class="number">0</span>]*x+T[flag][<span class="number">1</span>][<span class="number">1</span>]*y)%P;</span><br><span class="line">				<span class="comment">//x对应矩阵的第0列，y对应矩阵的第1列</span></span><br><span class="line">				<span class="comment">//p[k]对应矩阵的第0行，p[k+m]对应矩阵的第1行</span></span><br><span class="line">				<span class="keyword">if</span>(flag==<span class="number">2</span>) &#123;</span><br><span class="line">					p[k]=p[k]*inv2%P;</span><br><span class="line">					p[k+m]=p[k+m]*inv2%P;</span><br><span class="line">					<span class="comment">//逆变换</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125;	</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>多项式</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>无权无向图最小环问题</title>
-    <url>/2022/04/08/%E6%97%A0%E6%9D%83%E6%97%A0%E5%90%91%E5%9B%BE%E6%9C%80%E5%B0%8F%E7%8E%AF%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h3 id="无权无向图最小环问题"><a href="#无权无向图最小环问题" class="headerlink" title="无权无向图最小环问题"></a>无权无向图最小环问题</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>给一个$n$个点$m$条边的无向图，所有边的边权均为1，问从这个无向图的任意一点出发，经过若干条不重复的边回到起点，经过路径总长度最小是多少。</p>
-<h4 id="重边和自环"><a href="#重边和自环" class="headerlink" title="重边和自环"></a>重边和自环</h4><p>显然，自环和重边产生的环我们可以另外处理。</p>
-<p>有自环相当于找到一个长度为1的环。有重边相当于找到一个长度为2的环。</p>
-<p>于是现在我们只需要处理无自环重边的无向图的最小环就行了。</p>
-<h4 id="无自环重边的无向图最小环"><a href="#无自环重边的无向图最小环" class="headerlink" title="无自环重边的无向图最小环"></a>无自环重边的无向图最小环</h4><p>首先枚举一个环中的点$root$，然后以这个点为起点做BFS，于是我们可以得到一颗BFS树。</p>
-<p>然后枚举每个点$x$的每条边$(x,y)$,若$xy$之间不存在父子关系，则用$deep(x)+deep(y)+1$更新答案。</p>
-<p>一个显然的问题是，$deep(x)+deep(y)+1$不一定是一个经过$root$的环。</p>
-<p>但是如果不是经过$root$的环，这个值算出来一定比其中包含的环长更大，所以不影响答案。</p>
-<p>以上。</p>
-]]></content>
-      <categories>
-        <category>图论</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>拉格朗日插值</title>
-    <url>/2022/02/01/%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E6%8F%92%E5%80%BC/</url>
-    <content><![CDATA[<h3 id="拉格朗日插值"><a href="#拉格朗日插值" class="headerlink" title="拉格朗日插值"></a>拉格朗日插值</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>一个$n$次多项式$F(x)=\sum_{i=0}^{n}A_ix^i$的$n+1$个点值$（x_i,y_i）$。</p>
-<p>求$F(m)$的值，对一个数取模（也可能不取模）,m很大。</p>
-<h4 id="拉格朗日插值法"><a href="#拉格朗日插值法" class="headerlink" title="拉格朗日插值法"></a>拉格朗日插值法</h4><p>令$L_j(x)= \prod_{i=0,i\neq j}^{n} \frac{x-x_i}{x_j-x_i}$</p>
-<p>可以发现$L_j(x)$在$x=x_j$时为1，在$x=x_i(i \neq j)$时为0</p>
-<p>于是原多项式可以表示为$F(x)=\sum_{i=0}^{n}y_iL_i(x)$</p>
-<p>于是我们得到了一种$O(n^2)$的插值方法。</p>
-]]></content>
-      <categories>
-        <category>多项式</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>法雷数列(Farey sequences)和Stern-Brocot树</title>
-    <url>/2022/01/24/%E6%B3%95%E9%9B%B7%E5%BA%8F%E5%88%97%E5%92%8CStern-Brocot%E6%A0%91/</url>
-    <content><![CDATA[<h3 id="法雷数列-Farey-sequences-和Stern-Brocot树"><a href="#法雷数列-Farey-sequences-和Stern-Brocot树" class="headerlink" title="法雷数列(Farey sequences)和Stern-Brocot树"></a>法雷数列(Farey sequences)和Stern-Brocot树</h3><h4 id="Stern-Brocot树"><a href="#Stern-Brocot树" class="headerlink" title="Stern-Brocot树"></a>Stern-Brocot树</h4><p>{$\frac{0}{1}$,$\frac{1}{0}$}</p>
-<p>{$\frac{0}{1}$,$\frac{1}{1}$,$\frac{1}{0}$}</p>
-<p>{$\frac{0}{1}$,$\frac{1}{2}$,$\frac{1}{1}$,$\frac{2}{1}$,$\frac{1}{0}$}</p>
-<p>{$\frac{0}{1}$,$\frac{1}{3}$,$\frac{1}{2}$,$\frac{2}{3}$,$\frac{1}{1}$,$\frac{3}{2}$,$\frac{2}{1}$,$\frac{3}{1}$,$\frac{1}{0}$}</p>
-<p>每次在两个数$\frac{a}{b}$和$\frac{c}{d}$之间增加一个数$\frac{a+c}{b+d}$</p>
-<p>Stern-Brocot树的中序序列满足单调性。</p>
-<p>Stern-Brocot树的元素均为最简分数。</p>
-<p>Stern-Brocot树可以当做平衡二叉树来建立和维护。</p>
-<h4 id="法雷序列"><a href="#法雷序列" class="headerlink" title="法雷序列"></a>法雷序列</h4><p>$F_i$表示分母不超过$i$的最简真分数序列。</p>
-<p>{$\frac{0}{1}$,$\frac{1}{1}$}</p>
-<p>{$\frac{0}{1}$,$\frac{1}{2}$,$\frac{1}{1}$}</p>
-<p>{$\frac{0}{1}$,$\frac{1}{3}$,$\frac{1}{2}$,$\frac{2}{3}$,$\frac{1}{1}$}</p>
-<p>{$\frac{0}{1}$,$\frac{1}{4}$,$\frac{1}{3}$,$\frac{1}{2}$,$\frac{2}{3}$,$\frac{3}{4}$,$\frac{1}{1}$}</p>
-<p>设$F_i$序列长度为$L_i$,则$L_i=1+\sum_{k=1}^{i}\phi(k)$</p>
-]]></content>
-      <categories>
-        <category>数学</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>单位根反演</title>
-    <url>/2022/02/16/%E5%8D%95%E4%BD%8D%E6%A0%B9%E5%8F%8D%E6%BC%94/</url>
-    <content><![CDATA[<h3 id="单位根反演"><a href="#单位根反演" class="headerlink" title="单位根反演"></a>单位根反演</h3><h4 id="单位根"><a href="#单位根" class="headerlink" title="单位根"></a>单位根</h4><p>$Z^n=1$，则称$Z$为n次单位根，容易发现在复数域中有n个n次单位根，并且n个根等分以原点为圆心的单位圆。</p>
-<p>令第一象限离x轴正方向最近的n次单位根记为$\omega_{n}^{1}$，那么按照逆时针顺序第i个n次单位根就是$\omega_{n}^{i}$。</p>
-<h4 id="单位根的一些性质"><a href="#单位根的一些性质" class="headerlink" title="单位根的一些性质"></a>单位根的一些性质</h4><p>$ \omega_{2n}^{i}+\omega_{2n}^{i+n}=0 $ </p>
-<p>$ \omega_{kn}^{ki}=\omega_{n}^{i} $ </p>
-<p>$ \omega_{n}^{i}=\omega_{n}^{i \mod n} $ </p>
-<h4 id="单位根反演柿子"><a href="#单位根反演柿子" class="headerlink" title="单位根反演柿子"></a>单位根反演柿子</h4><p>$[n|k]=\frac{1}{n}\sum_{i=0}^{n-1}w_{n}^{ik}$</p>
-<h4 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h4><p>当$[k|n]=1$时，令$k=tn$</p>
-<p>则$\frac{1}{n}\sum_{i=0}^{n-1}w_{n}^{ik}=\frac{1}{n}\sum_{i=0}^{n-1}w_{n}^{itn}=1$</p>
-<p>当$[k|n] = 0$时，令$k=tn$</p>
-<p>则$\frac{1}{n}\sum_{i=0}^{n-1}w_{n}^{ik}=\frac{w_{n}^{0}-w_{n}^{kn}}{n(1-w_{n}^{k})}=0$</p>
-<h4 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h4><p>对于一些容易得到点值的多项式，用单位根反演可以容易得到k的倍数次数的系数之和。</p>
-<p>即求$\sum_{i=0}^{\lfloor \frac{n}{k} \rfloor} [ x^{ik} ] f(x)$</p>
-]]></content>
-      <categories>
-        <category>数学</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>辛普森积分法</title>
-    <url>/2022/02/06/%E8%BE%9B%E6%99%AE%E6%A3%AE%E7%A7%AF%E5%88%86%E6%B3%95/</url>
-    <content><![CDATA[<h3 id="普通辛普森积分"><a href="#普通辛普森积分" class="headerlink" title="普通辛普森积分"></a>普通辛普森积分</h3><p>我们一般用小的梯形（即一次函数）近似代表定积分的值.</p>
-<p>$\displaystyle \int_{L}^{R} f(x)dx \approx \int_{L}^{R} Ax+Bdx = \frac{(R-L)(f(L)+f(R))}{2}$</p>
-<p>但是辛普森积分是用二次函数来表示近似值。</p>
-<p>$\displaystyle \int_{L}^{R} f(x)dx \approx \int_{L}^{R} Ax^2+Bx+Cdx=\frac{(R-L)(f(L)+f(R)+4f(\frac{L+R}{2}))}{6}$</p>
-<h3 id="自适应辛普森积分"><a href="#自适应辛普森积分" class="headerlink" title="自适应辛普森积分"></a>自适应辛普森积分</h3><p>不停的二分区间，当$|s(L,M)+s(M,R)-s(L,R)|&lt;15\epsilon$时返回$s(L,M)+s(M,R)+\frac{s(L,M)+s(M,R)-s(L,R)}{15}$</p>
-<p>其中$M=\frac{L+R}{2}$，$\epsilon$为期望容差。</p>
-]]></content>
-      <categories>
-        <category>计算几何</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>连分数和Pell方程</title>
-    <url>/2022/01/22/%E8%BF%9E%E5%88%86%E6%95%B0%E5%92%8CPell%E6%96%B9%E7%A8%8B/</url>
-    <content><![CDATA[<h3 id="连分数"><a href="#连分数" class="headerlink" title="连分数"></a>连分数</h3><p>$x = a_0 + \displaystyle \frac{1}{a_1+\frac{1}{a_2+…}}$</p>
-<h4 id="有理数的连分数表示"><a href="#有理数的连分数表示" class="headerlink" title="有理数的连分数表示"></a>有理数的连分数表示</h4><p>有理数的连分数层数有限。</p>
-<p>可以表示为$x=[a_0;a_1,a_2,a_3…]$</p>
-<h4 id="非完全平方数的平方根的连分数表示"><a href="#非完全平方数的平方根的连分数表示" class="headerlink" title="非完全平方数的平方根的连分数表示"></a>非完全平方数的平方根的连分数表示</h4><p>非完全平方数的平方根的连分数层数是无限并且循环的，并且一个循环的结尾是$2a_0$。</p>
-<p>可以表示为$x=[a_0;a_1,a_2,a_3,…,2a_0,a_1,a_2,…]$</p>
-<p>也可以表示为$x=[a_0;(a_1,a_2,a_3,…,2a_0)]$</p>
-<h4 id="e的连分数表示"><a href="#e的连分数表示" class="headerlink" title="e的连分数表示"></a>e的连分数表示</h4><p>$e = [2;1,2,1,1,4,1,1,6,1,…,1,2k,1]$</p>
-<h3 id="标准型Pell方程"><a href="#标准型Pell方程" class="headerlink" title="标准型Pell方程"></a>标准型Pell方程</h3><h4 id="柿子"><a href="#柿子" class="headerlink" title="柿子"></a>柿子</h4><p>$x^2 - Dy^2 =1$</p>
-<h4 id="平凡解"><a href="#平凡解" class="headerlink" title="平凡解"></a>平凡解</h4><p>显然有解$(\pm 1,0)$</p>
-<h4 id="特解（最小解）"><a href="#特解（最小解）" class="headerlink" title="特解（最小解）"></a>特解（最小解）</h4><p>首先得到$\sqrt{D}$的连分数表示$D=[a_0;(a_1,a_2,a_3,…,2a_0)]$。</p>
-<p>去掉最后一项并令正整数$x_1,y_1$满足$\frac{x_1}{y_1}=[a_0;a_1,a_2,a_3,…]$。</p>
-<p>（$sqrt{D}$的连分数的单个循环并且去掉最后一项）</p>
-<p>通过类似辗转相除的方式得到特解$(x_1,y_1)$，注意这里大概率需要高精度。</p>
-<h4 id="通解"><a href="#通解" class="headerlink" title="通解"></a>通解</h4><p>$x_i + y_i\sqrt{D}= {(x_1+y_1\sqrt{D})}^i$</p>
-<p>递推式：</p>
-<p>$x_{i+1}=x_1x_i+Dy_1y_i$</p>
-<p>$y_{i+1}=x_1y_i+x_iy_1$</p>
-<h3 id="一般型Pell方程"><a href="#一般型Pell方程" class="headerlink" title="一般型Pell方程"></a>一般型Pell方程</h3><h4 id="婆罗摩笈多-斐波那契恒等式"><a href="#婆罗摩笈多-斐波那契恒等式" class="headerlink" title="婆罗摩笈多-斐波那契恒等式"></a>婆罗摩笈多-斐波那契恒等式</h4><p>$(a^2+b^2)(c^2+d^2)=(ac \mp bd)^2+(ad \pm bc)^2$</p>
-<h4 id="一般型Pell方程-1"><a href="#一般型Pell方程-1" class="headerlink" title="一般型Pell方程"></a>一般型Pell方程</h4><p>$x^2 - Dy^2 =k$</p>
-<h4 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h4><p>先找到第一组解${x_0}^2 - D{y_0}^2 = k$（使用连分数，或者暴力找）</p>
-<p>定义标准型Pell方程$r^2-Ds^2=1$</p>
-<p>利用婆罗摩笈多-斐波那契恒等式：$k=k \cdot 1=({x_0}^2-D{y_0}^2)(r^2-Ds^2)=({x_0}r+D{y_0}s)^2-D({x_0}s+{y_0}r)^2$</p>
-<p>于是得到$x={x_0}r+D{y_0}s,y={x_0}s+{y_0}r$，不停迭代即可得到所有整数解</p>
-<h3 id="没有xy项的二次丢番图方程"><a href="#没有xy项的二次丢番图方程" class="headerlink" title="没有xy项的二次丢番图方程"></a>没有xy项的二次丢番图方程</h3><p>$Ax^2+Bx+Cy^2+Dy+E=0$</p>
-<p>配成$x^2-Ny^2=K$的形式，然后用一般型Pell方程来解。</p>
 ]]></content>
       <categories>
         <category>数学</category>
@@ -238,42 +174,143 @@
       </categories>
   </entry>
   <entry>
-    <title>一些比较实用的技巧</title>
-    <url>/2022/04/17/%E4%B8%80%E4%BA%9B%E6%AF%94%E8%BE%83%E5%AE%9E%E7%94%A8%E7%9A%84%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<h3 id="一些比较实用的技巧"><a href="#一些比较实用的技巧" class="headerlink" title="一些比较实用的技巧"></a>一些比较实用的技巧</h3><h4 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h4><p>手写二分挺麻烦的，如果要在一个数组上询问是否存在某个数的话可以直接用自带的函数</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">binary_search</span>(V.<span class="built_in">begin</span>(), V.<span class="built_in">end</span>(), x)</span><br></pre></td></tr></table></figure>
-<h4 id="数字转字符串"><a href="#数字转字符串" class="headerlink" title="数字转字符串"></a>数字转字符串</h4><p>把一个数字x转化为string，并且是带符号的，很好用！</p>
-<p>注意在x是浮点数类型的时候，转化出的字符串只保留小数点后6位并且四舍五入。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">to_string</span>(x)</span><br></pre></td></tr></table></figure>
-<h4 id="离散化"><a href="#离散化" class="headerlink" title="离散化"></a>离散化</h4><p>对一组有序的数字进行离散化</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sort</span>(a,a+n);</span><br><span class="line"><span class="keyword">int</span> cnt=<span class="built_in">unique</span>(a,a+n)-a;</span><br></pre></td></tr></table></figure>
+    <title>无权无向图最小环问题</title>
+    <url>/2022/04/08/%E6%97%A0%E6%9D%83%E6%97%A0%E5%90%91%E5%9B%BE%E6%9C%80%E5%B0%8F%E7%8E%AF%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h3 id="无权无向图最小环问题"><a href="#无权无向图最小环问题" class="headerlink" title="无权无向图最小环问题"></a>无权无向图最小环问题</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>给一个$n$个点$m$条边的无向图，所有边的边权均为1，问从这个无向图的任意一点出发，经过若干条不重复的边回到起点，经过路径总长度最小是多少。</p>
+<h4 id="重边和自环"><a href="#重边和自环" class="headerlink" title="重边和自环"></a>重边和自环</h4><p>显然，自环和重边产生的环我们可以另外处理。</p>
+<p>有自环相当于找到一个长度为1的环。有重边相当于找到一个长度为2的环。</p>
+<p>于是现在我们只需要处理无自环重边的无向图的最小环就行了。</p>
+<h4 id="无自环重边的无向图最小环"><a href="#无自环重边的无向图最小环" class="headerlink" title="无自环重边的无向图最小环"></a>无自环重边的无向图最小环</h4><p>首先枚举一个环中的点$root$，然后以这个点为起点做BFS，于是我们可以得到一颗BFS树。</p>
+<p>然后枚举每个点$x$的每条边$(x,y)$,若$xy$之间不存在父子关系，则用$deep(x)+deep(y)+1$更新答案。</p>
+<p>一个显然的问题是，$deep(x)+deep(y)+1$不一定是一个经过$root$的环。</p>
+<p>但是如果不是经过$root$的环，这个值算出来一定比其中包含的环长更大，所以不影响答案。</p>
+<p>以上。</p>
+]]></content>
+      <categories>
+        <category>图论</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>拉格朗日插值</title>
+    <url>/2022/02/01/%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E6%8F%92%E5%80%BC/</url>
+    <content><![CDATA[<h3 id="拉格朗日插值"><a href="#拉格朗日插值" class="headerlink" title="拉格朗日插值"></a>拉格朗日插值</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>一个$n$次多项式$F(x)=\sum_{i=0}^{n}A_ix^i$的$n+1$个点值$（x_i,y_i）$。</p>
+<p>求$F(m)$的值，对一个数取模（也可能不取模）,m很大。</p>
+<h4 id="拉格朗日插值法"><a href="#拉格朗日插值法" class="headerlink" title="拉格朗日插值法"></a>拉格朗日插值法</h4><p>令$L_j(x)= \prod_{i=0,i\neq j}^{n} \frac{x-x_i}{x_j-x_i}$</p>
+<p>可以发现$L_j(x)$在$x=x_j$时为1，在$x=x_i(i \neq j)$时为0</p>
+<p>于是原多项式可以表示为$F(x)=\sum_{i=0}^{n}y_iL_i(x)$</p>
+<p>于是我们得到了一种$O(n^2)$的插值方法。</p>
 ]]></content>
       <categories>
         <category>多项式</category>
       </categories>
   </entry>
   <entry>
-    <title>形如4x^2+1的数的质因数分解</title>
-    <url>/2022/04/18/%E5%A4%9A%E9%A1%B9%E5%BC%8Ff(x)=4x%5E2+1%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/</url>
-    <content><![CDATA[<h3 id="形如4x-2-1的数的质因数分解"><a href="#形如4x-2-1的数的质因数分解" class="headerlink" title="形如4x^2+1的数的质因数分解"></a>形如4x^2+1的数的质因数分解</h3><p>最近做了个题，求$\sum_{i=1}^{10000000} maxPrime(4i^2+1)$</p>
-<p>考虑对前$10000000$个数求$4i^2+1$的质因数。</p>
-<p>先考虑暴力筛质因数，先处理2i之内的所有质数，超过2i的素数可以把根号内的素数筛完之后剩下的得到。</p>
-<p>首先对20000000之内筛一下质数，发现有百万级别个质数。</p>
-<p>这样的话暴力做需要$10000000 \ cdot 1000000$级别的计算量，肯定是寄了。</p>
-<p>根据初等数论的结论，能够表示为$x^2 + y^2（xy互质）$的数，不含有形如$4k+3$的质数。</p>
-<p>然后$4i^2+1$显然满足这条件，而且还是奇数，所以我们只用考虑形如$4k+1$的质数。</p>
-<p>然后再筛选一下可用质数，现在只剩下几十万个了。但是显然还是寄。</p>
-<p>如果$p|4(x)^2+1$，那么$p|4(x+p)^2+1$也满足。</p>
-<p>于是我们一找到一对$p,x$满足上述条件，就能把各个第$x+tp$项的数中的质因数p给除掉。</p>
-<p>如果$p|4(x)^2+1$，那么$p|4(p-x)^2+1$也满足。</p>
-<p>于是我们一找到一对$p,x$满足上述条件，就能把各个第$p-x+tp$项的数中的质因数p给除掉。</p>
-<p>然后我们发现去掉已知质数之后，我们枚举的那根号级别的试除居然一次都没有成功。</p>
-<p>那么起作用的就只剩下一开始就剩下的哪些质数了。</p>
-<p>感觉讲的也不是很清楚，直接丢代码好了。</p>
-<p>总的效率就相当于是$\sum_{prime} n/prime = nloglogn$</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">nums = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">10000001</span>):</span><br><span class="line">    nums.append(i * i * <span class="number">4</span> + <span class="number">1</span>)</span><br><span class="line">ans = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">10000001</span>):</span><br><span class="line">    ans.append(<span class="number">0</span>)</span><br><span class="line">n = <span class="built_in">len</span>(nums)</span><br><span class="line">js = <span class="number">0</span></span><br><span class="line"><span class="comment">#print(n)</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,n):</span><br><span class="line">    <span class="keyword">if</span>(nums[i] &gt; <span class="number">1</span>):</span><br><span class="line">        p = nums[i]</span><br><span class="line">        j = i</span><br><span class="line">        <span class="keyword">while</span> (j &lt; <span class="number">10000001</span>):</span><br><span class="line">            <span class="keyword">while</span>(nums[j] % p == <span class="number">0</span>):</span><br><span class="line">                 nums[j] = nums[j] // p</span><br><span class="line">            ans[j] = <span class="built_in">max</span>(ans[j],p)</span><br><span class="line">            j += p</span><br><span class="line">        j = p - i</span><br><span class="line">        <span class="keyword">while</span> (j &lt; <span class="number">10000001</span>):</span><br><span class="line">            <span class="keyword">while</span>(nums[j] % p == <span class="number">0</span>):</span><br><span class="line">                nums[j] = nums[j] // p</span><br><span class="line">            ans[j] = <span class="built_in">max</span>(ans[j],p)</span><br><span class="line">            j += p</span><br><span class="line">su = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">10000001</span>):</span><br><span class="line">    su += ans[i]</span><br><span class="line"><span class="built_in">print</span>(su)</span><br></pre></td></tr></table></figure>]]></content>
+    <title>法雷数列(Farey sequences)和Stern-Brocot树</title>
+    <url>/2022/01/24/%E6%B3%95%E9%9B%B7%E5%BA%8F%E5%88%97%E5%92%8CStern-Brocot%E6%A0%91/</url>
+    <content><![CDATA[<h3 id="法雷数列-Farey-sequences-和Stern-Brocot树"><a href="#法雷数列-Farey-sequences-和Stern-Brocot树" class="headerlink" title="法雷数列(Farey sequences)和Stern-Brocot树"></a>法雷数列(Farey sequences)和Stern-Brocot树</h3><h4 id="Stern-Brocot树"><a href="#Stern-Brocot树" class="headerlink" title="Stern-Brocot树"></a>Stern-Brocot树</h4><p>{$\frac{0}{1}$,$\frac{1}{0}$}</p>
+<p>{$\frac{0}{1}$,$\frac{1}{1}$,$\frac{1}{0}$}</p>
+<p>{$\frac{0}{1}$,$\frac{1}{2}$,$\frac{1}{1}$,$\frac{2}{1}$,$\frac{1}{0}$}</p>
+<p>{$\frac{0}{1}$,$\frac{1}{3}$,$\frac{1}{2}$,$\frac{2}{3}$,$\frac{1}{1}$,$\frac{3}{2}$,$\frac{2}{1}$,$\frac{3}{1}$,$\frac{1}{0}$}</p>
+<p>每次在两个数$\frac{a}{b}$和$\frac{c}{d}$之间增加一个数$\frac{a+c}{b+d}$</p>
+<p>Stern-Brocot树的中序序列满足单调性。</p>
+<p>Stern-Brocot树的元素均为最简分数。</p>
+<p>Stern-Brocot树可以当做平衡二叉树来建立和维护。</p>
+<h4 id="法雷序列"><a href="#法雷序列" class="headerlink" title="法雷序列"></a>法雷序列</h4><p>$F_i$表示分母不超过$i$的最简真分数序列。</p>
+<p>{$\frac{0}{1}$,$\frac{1}{1}$}</p>
+<p>{$\frac{0}{1}$,$\frac{1}{2}$,$\frac{1}{1}$}</p>
+<p>{$\frac{0}{1}$,$\frac{1}{3}$,$\frac{1}{2}$,$\frac{2}{3}$,$\frac{1}{1}$}</p>
+<p>{$\frac{0}{1}$,$\frac{1}{4}$,$\frac{1}{3}$,$\frac{1}{2}$,$\frac{2}{3}$,$\frac{3}{4}$,$\frac{1}{1}$}</p>
+<p>设$F_i$序列长度为$L_i$,则$L_i=1+\sum_{k=1}^{i}\phi(k)$</p>
+]]></content>
       <categories>
         <category>数学</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>辛普森积分法</title>
+    <url>/2022/02/06/%E8%BE%9B%E6%99%AE%E6%A3%AE%E7%A7%AF%E5%88%86%E6%B3%95/</url>
+    <content><![CDATA[<h3 id="普通辛普森积分"><a href="#普通辛普森积分" class="headerlink" title="普通辛普森积分"></a>普通辛普森积分</h3><p>我们一般用小的梯形（即一次函数）近似代表定积分的值.</p>
+<p>$\displaystyle \int_{L}^{R} f(x)dx \approx \int_{L}^{R} Ax+Bdx = \frac{(R-L)(f(L)+f(R))}{2}$</p>
+<p>但是辛普森积分是用二次函数来表示近似值。</p>
+<p>$\displaystyle \int_{L}^{R} f(x)dx \approx \int_{L}^{R} Ax^2+Bx+Cdx=\frac{(R-L)(f(L)+f(R)+4f(\frac{L+R}{2}))}{6}$</p>
+<h3 id="自适应辛普森积分"><a href="#自适应辛普森积分" class="headerlink" title="自适应辛普森积分"></a>自适应辛普森积分</h3><p>不停的二分区间，当$|s(L,M)+s(M,R)-s(L,R)|&lt;15\epsilon$时返回$s(L,M)+s(M,R)+\frac{s(L,M)+s(M,R)-s(L,R)}{15}$</p>
+<p>其中$M=\frac{L+R}{2}$，$\epsilon$为期望容差。</p>
+]]></content>
+      <categories>
+        <category>计算几何</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>单位根反演</title>
+    <url>/2022/02/16/%E5%8D%95%E4%BD%8D%E6%A0%B9%E5%8F%8D%E6%BC%94/</url>
+    <content><![CDATA[<h3 id="单位根反演"><a href="#单位根反演" class="headerlink" title="单位根反演"></a>单位根反演</h3><h4 id="单位根"><a href="#单位根" class="headerlink" title="单位根"></a>单位根</h4><p>$Z^n=1$，则称$Z$为n次单位根，容易发现在复数域中有n个n次单位根，并且n个根等分以原点为圆心的单位圆。</p>
+<p>令第一象限离x轴正方向最近的n次单位根记为$\omega_{n}^{1}$，那么按照逆时针顺序第i个n次单位根就是$\omega_{n}^{i}$。</p>
+<h4 id="单位根的一些性质"><a href="#单位根的一些性质" class="headerlink" title="单位根的一些性质"></a>单位根的一些性质</h4><p>$ \omega_{2n}^{i}+\omega_{2n}^{i+n}=0 $ </p>
+<p>$ \omega_{kn}^{ki}=\omega_{n}^{i} $ </p>
+<p>$ \omega_{n}^{i}=\omega_{n}^{i \mod n} $ </p>
+<h4 id="单位根反演柿子"><a href="#单位根反演柿子" class="headerlink" title="单位根反演柿子"></a>单位根反演柿子</h4><p>$[n|k]=\frac{1}{n}\sum_{i=0}^{n-1}w_{n}^{ik}$</p>
+<h4 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h4><p>当$[k|n]=1$时，令$k=tn$</p>
+<p>则$\frac{1}{n}\sum_{i=0}^{n-1}w_{n}^{ik}=\frac{1}{n}\sum_{i=0}^{n-1}w_{n}^{itn}=1$</p>
+<p>当$[k|n] = 0$时，令$k=tn$</p>
+<p>则$\frac{1}{n}\sum_{i=0}^{n-1}w_{n}^{ik}=\frac{w_{n}^{0}-w_{n}^{kn}}{n(1-w_{n}^{k})}=0$</p>
+<h4 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h4><p>对于一些容易得到点值的多项式，用单位根反演可以容易得到k的倍数次数的系数之和。</p>
+<p>即求$\sum_{i=0}^{\lfloor \frac{n}{k} \rfloor} [ x^{ik} ] f(x)$</p>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>连分数和Pell方程</title>
+    <url>/2022/01/22/%E8%BF%9E%E5%88%86%E6%95%B0%E5%92%8CPell%E6%96%B9%E7%A8%8B/</url>
+    <content><![CDATA[<h3 id="连分数"><a href="#连分数" class="headerlink" title="连分数"></a>连分数</h3><p>$x = a_0 + \displaystyle \frac{1}{a_1+\frac{1}{a_2+…}}$</p>
+<h4 id="有理数的连分数表示"><a href="#有理数的连分数表示" class="headerlink" title="有理数的连分数表示"></a>有理数的连分数表示</h4><p>有理数的连分数层数有限。</p>
+<p>可以表示为$x=[a_0;a_1,a_2,a_3…]$</p>
+<h4 id="非完全平方数的平方根的连分数表示"><a href="#非完全平方数的平方根的连分数表示" class="headerlink" title="非完全平方数的平方根的连分数表示"></a>非完全平方数的平方根的连分数表示</h4><p>非完全平方数的平方根的连分数层数是无限并且循环的，并且一个循环的结尾是$2a_0$。</p>
+<p>可以表示为$x=[a_0;a_1,a_2,a_3,…,2a_0,a_1,a_2,…]$</p>
+<p>也可以表示为$x=[a_0;(a_1,a_2,a_3,…,2a_0)]$</p>
+<h4 id="e的连分数表示"><a href="#e的连分数表示" class="headerlink" title="e的连分数表示"></a>e的连分数表示</h4><p>$e = [2;1,2,1,1,4,1,1,6,1,…,1,2k,1]$</p>
+<h3 id="标准型Pell方程"><a href="#标准型Pell方程" class="headerlink" title="标准型Pell方程"></a>标准型Pell方程</h3><h4 id="柿子"><a href="#柿子" class="headerlink" title="柿子"></a>柿子</h4><p>$x^2 - Dy^2 =1$</p>
+<h4 id="平凡解"><a href="#平凡解" class="headerlink" title="平凡解"></a>平凡解</h4><p>显然有解$(\pm 1,0)$</p>
+<h4 id="特解（最小解）"><a href="#特解（最小解）" class="headerlink" title="特解（最小解）"></a>特解（最小解）</h4><p>首先得到$\sqrt{D}$的连分数表示$D=[a_0;(a_1,a_2,a_3,…,2a_0)]$。</p>
+<p>去掉最后一项并令正整数$x_1,y_1$满足$\frac{x_1}{y_1}=[a_0;a_1,a_2,a_3,…]$。</p>
+<p>（$sqrt{D}$的连分数的单个循环并且去掉最后一项）</p>
+<p>通过类似辗转相除的方式得到特解$(x_1,y_1)$，注意这里大概率需要高精度。</p>
+<h4 id="通解"><a href="#通解" class="headerlink" title="通解"></a>通解</h4><p>$x_i + y_i\sqrt{D}= {(x_1+y_1\sqrt{D})}^i$</p>
+<p>递推式：</p>
+<p>$x_{i+1}=x_1x_i+Dy_1y_i$</p>
+<p>$y_{i+1}=x_1y_i+x_iy_1$</p>
+<h3 id="一般型Pell方程"><a href="#一般型Pell方程" class="headerlink" title="一般型Pell方程"></a>一般型Pell方程</h3><h4 id="婆罗摩笈多-斐波那契恒等式"><a href="#婆罗摩笈多-斐波那契恒等式" class="headerlink" title="婆罗摩笈多-斐波那契恒等式"></a>婆罗摩笈多-斐波那契恒等式</h4><p>$(a^2+b^2)(c^2+d^2)=(ac \mp bd)^2+(ad \pm bc)^2$</p>
+<h4 id="一般型Pell方程-1"><a href="#一般型Pell方程-1" class="headerlink" title="一般型Pell方程"></a>一般型Pell方程</h4><p>$x^2 - Dy^2 =k$</p>
+<h4 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h4><p>先找到第一组解${x_0}^2 - D{y_0}^2 = k$（使用连分数，或者暴力找）</p>
+<p>定义标准型Pell方程$r^2-Ds^2=1$</p>
+<p>利用婆罗摩笈多-斐波那契恒等式：$k=k \cdot 1=({x_0}^2-D{y_0}^2)(r^2-Ds^2)=({x_0}r+D{y_0}s)^2-D({x_0}s+{y_0}r)^2$</p>
+<p>于是得到$x={x_0}r+D{y_0}s,y={x_0}s+{y_0}r$，不停迭代即可得到所有整数解</p>
+<h3 id="没有xy项的二次丢番图方程"><a href="#没有xy项的二次丢番图方程" class="headerlink" title="没有xy项的二次丢番图方程"></a>没有xy项的二次丢番图方程</h3><p>$Ax^2+Bx+Cy^2+Dy+E=0$</p>
+<p>配成$x^2-Ny^2=K$的形式，然后用一般型Pell方程来解。</p>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>快速沃尔什变换</title>
+    <url>/2022/04/16/%E5%BF%AB%E9%80%9F%E6%B2%83%E5%B0%94%E4%BB%80%E5%8F%98%E6%8D%A2/</url>
+    <content><![CDATA[<h3 id="快速沃尔什变换（位运算卷积）"><a href="#快速沃尔什变换（位运算卷积）" class="headerlink" title="快速沃尔什变换（位运算卷积）"></a>快速沃尔什变换（位运算卷积）</h3><p>已知$A_i$和$B_i$,求$\displaystyle C_k=\sum_{i \bigoplus j=k}A_iB_j$。</p>
+<p>首先可以构造三个矩阵$T_1,T_2,T_3$。使得$T_1A \cdot T_2B=T_3C$</p>
+<p>可以看出左边是个点乘的式子，将某一位展开。</p>
+<p>$\displaystyle \sum_{i=0}^{n} T_1(x,i)A_i\sum_{j=0}^{n} T_2(x,j)B_j=\sum_{k=0}^{n} T_1(x,k)C_k$</p>
+<p>显然，如果三个矩阵满足$T_1(x,i) * T(x,j) = T(x,k) (i \bigoplus j=k)$,那么就能满足$\displaystyle C_k=\sum_{i \bigoplus j=k}A_iB_j$，这就是我们要的式子。</p>
+<p>在得到三个矩阵之后，按照式子算出$T_3C$,然后再用${T_3}^{-1}$来得到$C$。</p>
+<p><strong>一个我不会证的结论</strong>：无论$\bigoplus$是任何运算，$T_!T_2T_3$中的元素都可以只由$\{-1,0,1\}$组成。</p>
+<p>于是我们可以用最暴力的方法枚举所有可能性，一共$3^{4 * 3}=531441$种可能。</p>
+<p>然后对于每种可能，先看$C$是否可逆（计算行列式$det(C)&gt;0$）。然后判断是否满足$T_1(x,i) * T(x,j) = T(x,k) (i \bigoplus j=k)$。</p>
+<p>两个条件都满足的话，那三个矩阵就找到了。这时候我们要求${T_3}^{-1}$。</p>
+<p>$\displaystyle \left( \begin{matrix} a &amp; b \\ c &amp; d \end{matrix} \right)^{-1}=\frac{1}{ad-bc}\left( \begin{matrix} d &amp; -b \\ -c &amp; a \end{matrix} \right)$</p>
+<p>求$T_1A$的方法就是类似FFT的过程。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">LL T[<span class="number">3</span>][<span class="number">2</span>][<span class="number">2</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">findFWT</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> l=<span class="number">0</span>;l&lt;<span class="number">531441</span>;++l)&#123;</span><br><span class="line">		<span class="keyword">int</span> tmp=l;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;<span class="number">3</span>;++k)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;++i)&#123;</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">2</span>;++j)&#123;</span><br><span class="line">					T[k][i][j]=<span class="number">1</span>-tmp%<span class="number">3</span>;</span><br><span class="line">					tmp/=<span class="number">3</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> det=T[<span class="number">2</span>][<span class="number">0</span>][<span class="number">0</span>]*T[<span class="number">2</span>][<span class="number">1</span>][<span class="number">1</span>]-T[<span class="number">2</span>][<span class="number">0</span>][<span class="number">1</span>]*T[<span class="number">2</span>][<span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">		<span class="keyword">if</span>(!det) <span class="keyword">continue</span>;</span><br><span class="line">		<span class="keyword">bool</span> f=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;<span class="number">2</span>;++k)&#123;</span><br><span class="line">			<span class="keyword">int</span> cnf[<span class="number">4</span>]=&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>&#125;;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;++i)&#123;</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">2</span>;++j)&#123;</span><br><span class="line">					cnf[i&lt;&lt;<span class="number">1</span>|j]+=T[<span class="number">0</span>][k][i]*T[<span class="number">1</span>][k][j];</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;++i)</span><br><span class="line">				<span class="keyword">if</span>(cnf[i]!=T[<span class="number">2</span>][k][((x&gt;&gt;i)&amp;<span class="number">1</span>)])</span><br><span class="line">					f=<span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(f)&#123;</span><br><span class="line">			<span class="built_in">swap</span>(T[<span class="number">2</span>][<span class="number">0</span>][<span class="number">0</span>],T[<span class="number">2</span>][<span class="number">1</span>][<span class="number">1</span>]);</span><br><span class="line">			T[<span class="number">2</span>][<span class="number">0</span>][<span class="number">1</span>]*=<span class="number">-1</span>;</span><br><span class="line">			T[<span class="number">2</span>][<span class="number">1</span>][<span class="number">0</span>]*=<span class="number">-1</span>;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++)</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">2</span>;j++)&#123;</span><br><span class="line">					T[<span class="number">2</span>][i][j]=T[<span class="number">2</span>][i][j]*<span class="number">2</span>/det;</span><br><span class="line">				&#125;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">FWT</span><span class="params">(LL *a,<span class="keyword">int</span> n,<span class="keyword">int</span> flag)</span></span>&#123;</span><br><span class="line">	LL x,y;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> l=<span class="number">2</span>;l&lt;=n;l&lt;&lt;=<span class="number">1</span>)&#123;</span><br><span class="line">		<span class="keyword">int</span> m=l&gt;&gt;<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span>(LL *p=a;p!=a+n;p+=l)</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;m;++k)&#123;</span><br><span class="line">				x=p[k];y=p[k+m];</span><br><span class="line">				p[k]=(T[flag][<span class="number">0</span>][<span class="number">0</span>]*x+T[flag][<span class="number">0</span>][<span class="number">1</span>]*y)%P;</span><br><span class="line">				p[k+m]=(T[flag][<span class="number">1</span>][<span class="number">0</span>]*x+T[flag][<span class="number">1</span>][<span class="number">1</span>]*y)%P;</span><br><span class="line">				<span class="comment">//x对应矩阵的第0列，y对应矩阵的第1列</span></span><br><span class="line">				<span class="comment">//p[k]对应矩阵的第0行，p[k+m]对应矩阵的第1行</span></span><br><span class="line">				<span class="keyword">if</span>(flag==<span class="number">2</span>) &#123;</span><br><span class="line">					p[k]=p[k]*inv2%P;</span><br><span class="line">					p[k+m]=p[k+m]*inv2%P;</span><br><span class="line">					<span class="comment">//逆变换</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125;	</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>多项式</category>
       </categories>
   </entry>
 </search>
